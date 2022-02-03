@@ -1,0 +1,12 @@
+{
+  "name": "playground-svelte",
+  "version": "0.0.0",
+  "scripts": {
+    "demo": "vite"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.32",
+    "svelte": "^3.44.3",
+    "vite": "^2.7.3"
+  }
+}
