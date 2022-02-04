@@ -1,9 +1,14 @@
 <script>
-  const msg = "Hola"
+  import {storyblokEditable} from '@storyblok/svelte';
+
+  let blok = {
+  _editable: `<!--#storyblok#{ "id": 12345, "uid": "fc34-uad1"}-->`,
+};
+
 </script>
 
 <main>
-  <h1>{msg}</h1>
+  <h1 use:storyblokEditable={blok}><slot></slot></h1>
 </main>
 
 <style>
