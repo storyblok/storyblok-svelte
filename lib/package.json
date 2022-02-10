@@ -4,6 +4,7 @@
   "description": "Storyblok SDK to connect Storyblok with Svelte",
   "main": "./dist/storyblok-svelte.js",
   "module": "./dist/storyblok-svelte.mjs",
+  "svelte": "index.js",
   "files": [
     "dist"
   ],
@@ -23,7 +24,7 @@
     "prepublishOnly": "npm run build && cp ../README.md ./"
   },
   "dependencies": {
-    "@storyblok/js": "^1.0.0"
+    "@storyblok/js": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -46,7 +47,8 @@
       "json"
     ],
     "transform": {
-      "^.+\\.js$": "babel-jest"    }
+      "^.+\\.js$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -63,7 +65,8 @@
   "homepage": "https://github.com/storyblok/storyblok-svelte",
   "release": {
     "branches": [
-      "main"    ]
+      "main"
+    ]
   },
   "publishConfig": {
     "access": "public"

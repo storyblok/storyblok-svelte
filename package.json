@@ -21,14 +21,16 @@
     "@vue/composition-api": "^1.4.4",
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.4.0",
     "eslint-plugin-vue": "^8.0.3",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
-    "prettier": "^2.4.1",
+    "prettier": "^2.5.1",
+    "prettier-plugin-svelte": "^2.6.0",
     "unplugin-vue2-script-setup": "^0.9.1"
   },
   "lint-staged": {
-    "*.{vue,js,css}": [
+    "*.{svelte,js,css}": [
       "prettier --write",
       "eslint"
     ],
@@ -47,7 +49,18 @@
       "plugin:vue/vue3-recommended",
       "prettier"
     ],
-    "ignorePatterns": "dist/"
+    "ignorePatterns": "dist/",
+    "plugins": [
+      "svelte3"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "*.svelte"
+        ],
+        "processor": "svelte3/svelte3"
+      }
+    ]
   },
   "prettier": {
     "trailingComma": "es5",

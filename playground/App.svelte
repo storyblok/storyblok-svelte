@@ -1,24 +1,32 @@
 <script>
-  import { useStoryblokApi, useStoryblokBridge, getComponent } from "@storyblok/svelte";
+  import { onMount } from "svelte";
+  import {
+    useStoryblokApi,
+    useStoryblokBridge,
+    // getComponent,
+    StoryblokComponent,
+  } from "@storyblok/svelte";
 
-  const sbApi = useStoryblokApi();
   let story = null;
 
-  async function fetchStory() {
-    const { data } = await sbApi.get("cdn/stories/home", { version: "draft" });
-    story = data.story;
-    useStoryblokBridge(data.story.id, (newStory) => {
-      story = newStory;
-    });
-  }
+  onMount(async () => {
+    const sbApi = useStoryblokApi();
 
-  fetchStory();
+    setTimeout(async () => {
+      const { data } = await sbApi.get("cdn/stories/home", {
+        version: "draft",
+      });
+      story = data.story;
+
+      useStoryblokBridge(data.story.id, (newStory) => (story = newStory));
+    }, 2000);
+  });
 </script>
 
 <main>
   {#if story}
     {#each story.content.body as blok}
-      <svelte:component this={getComponent(blok.component)} {blok} />
+      <StoryblokComponent {blok} />
     {/each}
   {/if}
 </main>
