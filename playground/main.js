@@ -4,11 +4,8 @@ import Teaser from "./Teaser.svelte";
 
 storyblokInit({
   accessToken: "pKHHk3IqorP1mrfe8fACOwtt",
-  // bridge: false,
-  // apiOptions: {  },
-  use: [apiPlugin], // use it only if you need it}),
+  use: [apiPlugin],
   components: {
-    // teaser: () => import("./Teaser.svelte"),
     teaser: Teaser,
   },
 });

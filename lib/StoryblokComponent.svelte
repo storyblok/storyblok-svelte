@@ -14,4 +14,4 @@
   else loadComponent();
 </script>
 
-<svelte:component this={resolvedComponent} {blok} />
+<svelte:component this={resolvedComponent} {blok} {...$$restProps} />
