@@ -8,6 +8,7 @@ storyblokInit({
   // apiOptions: {  },
   use: [apiPlugin], // use it only if you need it}),
   components: {
+    // teaser: () => import("./Teaser.svelte"),
     teaser: Teaser,
   },
 });
