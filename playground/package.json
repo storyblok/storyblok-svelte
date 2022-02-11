@@ -1,6 +1,6 @@
 {
-  "name": "playground-svelte",
-  "version": "0.0.0",
+  "name": "@storyblok/playground",
+  "version": "0.0.1",
   "scripts": {
     "demo": "vite"
   },

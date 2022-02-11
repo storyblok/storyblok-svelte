@@ -3,7 +3,6 @@
   import {
     useStoryblokApi,
     useStoryblokBridge,
-    // getComponent,
     StoryblokComponent,
   } from "@storyblok/svelte";
 
@@ -11,15 +10,12 @@
 
   onMount(async () => {
     const sbApi = useStoryblokApi();
+    const { data } = await sbApi.get("cdn/stories/home", {
+      version: "draft",
+    });
+    story = data.story;
 
-    setTimeout(async () => {
-      const { data } = await sbApi.get("cdn/stories/home", {
-        version: "draft",
-      });
-      story = data.story;
-
-      useStoryblokBridge(data.story.id, (newStory) => (story = newStory));
-    }, 2000);
+    useStoryblokBridge(data.story.id, (newStory) => (story = newStory));
   });
 </script>
 
