@@ -1,20 +1,21 @@
 <div align="center">
-	<a href="https://www.storyblok.com?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue"  align="center">
-		<img src="https://a.storyblok.com/f/88751/1776x360/a7d027d26d/sb-vue.png"  alt="Storyblok Logo">
+	<a href="https://www.storyblok.com?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte"  align="center">
+		<img src="https://a.storyblok.com/f/88751/1776x360/a7d027d26d/sb-svelte.png"  alt="Storyblok Logo">
 	</a>
-	<h1 align="center">@storyblok/vue</h1>
+	<h1 align="center">@storyblok/svelte</h1>
   <p align="center">
-    The Vue plugin you need to interact with <a href="http://www.storyblok.com?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue" target="_blank">Storyblok API</a> and enable the <a href="https://www.storyblok.com/docs/guide/essentials/visual-editor?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue" target="_blank">Real-time Visual Editing Experience</a>. 
+    The Svelte SDK you need to interact with <a href="http://www.storyblok.com?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte" target="_blank">Storyblok API</a> and enable the <a href="https://www.storyblok.com/docs/guide/essentials/visual-editor?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte" target="_blank">Real-time Visual Editing Experience</a>. 
   </p>
   <br />
 </div>
 
+ <!-- TODO: add correct link to NPM  -->
 <p align="center">
-  <a href="https://npmjs.com/package/@storyblok/vue">
-    <img src="https://img.shields.io/npm/v/@storyblok/vue/latest.svg?style=flat-square" alt="Storyblok Vue" />
+  <a href="https://npmjs.com/package/@storyblok/svelte">
+    <img src="https://img.shields.io/npm/v/@storyblok-svelte/latest.svg?style=flat-square" alt="Storyblok Svelte" />
   </a>
-  <a href="https://npmjs.com/package/@storyblok/vue" rel="nofollow">
-    <img src="https://img.shields.io/npm/dt/@storyblok/vue.svg?style=flat-square" alt="npm">
+  <a href="https://npmjs.com/package/@storyblok/svelte" rel="nofollow">
+    <img src="https://img.shields.io/npm/dt/@storyblok-svelte.svg?style=flat-square" alt="npm">
   </a>
 </p>
 
@@ -25,163 +26,129 @@
   <a href="https://twitter.com/intent/follow?screen_name=storyblok">
     <img src="https://img.shields.io/badge/Follow-%40storyblok-09b3af?style=appveyor&logo=twitter" alt="Follow @Storyblok" />
   </a>
-  <a href="https://app.storyblok.com/#!/signup?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue">
+  <a href="https://app.storyblok.com/#!/signup?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte">
     <img src="https://img.shields.io/badge/Try%20Storyblok-Free-09b3af?style=appveyor&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAHqADAAQAAAABAAAAHgAAAADpiRU/AAACRElEQVRIDWNgGGmAEd3D3Js3LPrP8D8WXZwSPiMjw6qvPoHhyGYwIXNAbGpbCjbzP0MYuj0YFqMroBV/wCxmIeSju64eDNzMBJUxvP/9i2Hnq5cM1devMnz984eQsQwETeRhYWHgIcJiXqC6VHlFBjUeXgav40cIWkz1oLYXFmGwFBImaDFBHyObcOzdW4aSq5eRhRiE2dgYlpuYoYSKJi8vw3GgWnyAJIs/AuPu4scPGObd/fqVQZ+PHy7+6udPOBsXgySLDfn5GRYYmaKYJcXBgWLpsx8/GPa8foWiBhuHJIsl2DkYQqWksZkDFgP5PObcKYYff//iVAOTIDlx/QPqRMb/YSYBaWlOToZIaVkGZmAZSQiQ5OPtwHwacuo4iplMQEu6tXUZMhSUGDiYmBjylFQYvv/7x9B04xqKOnQOyT5GN+Df//8M59ASXKyMHLoyDD5JPtbj42OYrm+EYgg70JfuYuIoYmLs7AwMjIzA+uY/zjAnyWJpDk6GOFnCvrn86SOwmsNtKciVFAc1ileBHFDC67lzG10Yg0+SjzF0ownsf/OaofvOLYaDQJoQIGix94ljv1gIZI8Pv38zPvj2lQWYf3HGKbpDCFp85v07NnRN1OBTPY6JdRSGxcCw2k6sZuLVMZ5AV4s1TozPnGGFKbz+/PE7IJsHmC//MDMyhXBw8e6FyRFLv3Z0/IKuFqvFyIqAzd1PwBzJw8jAGPfVx38JshwlbIygxmYY43/GQmpais0ODDHuzevLMARHBcgIAQAbOJHZW0/EyQAAAABJRU5ErkJggg==" alt="Follow @Storyblok" />
   </a>
 </p>
 
-**Note**: This plugin is for Vue 2. [Check out the docs for Vue 3 version](https://github.com/storyblok/storyblok-vue/tree/next).
+## TL; DR -
 
-## 🚀 Usage
+`@storyblok/svelte` helps you connect your Svelte project to Storyblok by:
 
-> If you are first-time user of the Storyblok, read the [Getting Started](https://www.storyblok.com/docs/guide/getting-started?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue) guide to get a project ready in less than 5 minutes.
+- Providing a `storyblokApi` object in your app, which is an instance of [storyblok-js-client](https://github.com/storyblok/storyblok-js-client)
+- Enabling real time editing through the [Storyblok Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
+- Providing the `StoryblokComponent` to link editable components to the Storyblok Visual Editor
+
+## Usage
+
+> If you are first-time user of the Storyblok, read the [Getting Started](https://www.storyblok.com/tp/add-a-headless-cms-to-svelte-in-5-minutes) guide to get a project ready in less than 5 minutes.
 
 ### Installation
 
-Install `@storyblok/vue`
+Install `@storyblok/svelte`
 
 ```bash
-npm install --save-dev @storyblok/vue
-# yarn add -D @storyblok/vue
+npm install @storyblok/svelte
+# yarn add @storyblok/svelte
 ```
 
-Register the plugin on your application (usually in `main.js`), add the `apiPlugin` and add the [access token](https://www.storyblok.com/docs/api/content-delivery#topics/authentication?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue) of your Storyblok space:
+Initialize the library in your application (usually in `main.js`) by adding the `apiPlugin` and the [access token](https://www.storyblok.com/docs/api/content-delivery#topics/authentication?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte) of your Storyblok space:
 
 ```js
-import Vue from "vue";
-import { StoryblokVue, apiPlugin } from "@storyblok/vue";
-import App from "./App.vue";
+import App from "./App.svelte";
+import { storyblokInit, apiPlugin } from "@storyblok/svelte";
 
-Vue.use(StoryblokVue, {
+storyblokInit({
   accessToken: "<your-token>",
+  // bridge: false,
+  // apiOptions: {  },
   use: [apiPlugin],
+  components: {
+    // teaser: () => import("./Teaser.svelte"),
+    teaser: Teaser,
+  },
 });
 ```
 
-That's it! All the features are enabled for you: the _Api Client_ for interacting with [Storyblok CDN API](https://www.storyblok.com/docs/api/content-delivery#topics/introduction?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue), and _Storyblok Bridge_ for [real-time visual editing experience](https://www.storyblok.com/docs/guide/essentials/visual-editor?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue).
+> Add all your components to the components object in the storyblokInit function. You can either load all of them at the same time by adding them to the list; or you could lazy load them when they are needed by uncommenting the dynamic import line.
+
+### Storyblok Component
+
+The Storyblok Component helper function loads and resolves all components dynamically end enables lazy loading them with the `getComponent` function.
+
+That's it! All the features are enabled for you: the _Api Client_ for interacting with [Storyblok CDN API](https://www.storyblok.com/docs/api/content-delivery#topics/introduction?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte), and _Storyblok Bridge_ for [real-time visual editing experience](https://www.storyblok.com/docs/guide/essentials/visual-editor?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
 
 > You can enable/disable some of these features if you don't need them, so you save some KB. Please read the "Features and API" section
 
-#### Composition API
-
-Install [@vue/composition-api](https://github.com/vuejs/composition-api) and register it in the application:
-
-```js
-// main.js
-import VueCompositionAPI from "@vue/composition-api";
-Vue.use(VueCompositionAPI);
-```
-
-To use **script setup**, install [unplugin-vue2-script-setup](https://github.com/antfu/unplugin-vue2-script-setup). Depending on your setup, the configuration is different. For example, in Vite:
-
-```js
-// vite.config.js
-import { createVuePlugin } from "vite-plugin-vue2";
-import ScriptSetup from "unplugin-vue2-script-setup/vite";
-
-export default {
-  plugins: [createVuePlugin(), ScriptSetup()],
-};
-```
-
 #### From a CDN
 
-Install the file from the CDN and access the methods via `window.storyblokVue`:
+Install the file from the CDN and access the methods via `window.storyblokSvelte`:
 
 ```html
-<script src="https://unpkg.com/@storyblok/vue"></script>
+<script src="https://unpkg.com/@storyblok/svelte"></script>
 ```
 
 ### Getting started
 
-`@storyblok/vue` does three actions when you initialize it:
-
-- Provides a `storyblokApi` object in your app, which is an instance of [storyblok-js-client](https://github.com/storyblok/storyblok-js-client)
-- Loads [Storyblok Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue) for real-time visual updates
-- Provides a `v-editable` directive to link editable components to the Storyblok Visual Editor
-
 #### 1. Fetching Content
 
-Inject `storyblokApi` when using Composition API:
+On Mount, we are calling the `useStoryblokApi()`, which asyncronously gets all stories from the CDN in drafting stage.
 
 ```html
-<template>
-  <div>
-    <p v-for="story in stories" :key="story.id">{{ story.name }}</p>
-  </div>
-</template>
+<script>
+  import { onMount } from "svelte";
+  import { useStoryblokApi } from "@storyblok/svelte";
 
-<script setup>
-  import { useStoryblokApi } from "@storyblok/vue";
-
-  const storyblokApi = useStoryblokApi();
-  const { data } = await storyblokApi.get("cdn/stories", { version: "draft" });
-</script>
-```
-
-> Note: you can skip using `apiPlugin` if you prefer your own method or function to fetch your data.
-
-#### 2. Listen to Storyblok Visual Editor events
-
-Use `useStoryBridge` to get the new story every time is triggered a `change` event from the Visual Editor. You need to pass the story id as first param, and a callback function as second param to update the new story:
-
-```html
-<script setup>
-  import { onMounted } from "vue";
-  import { useStoryblokBridge, useStoryblokApi } from "@storyblok/vue";
-
-  const storyblokApi = useStoryblokApi();
-  const { data } = await storyblokApi.get("cdn/stories", { version: "draft" });
-  const state = reactive({ story: data.story });
-
-  onMounted(() => {
-    useStoryblokBridge(state.story.id, story => (state.story = story));
+  onMount(async () => {
+    const storyblokApi = useStoryblokApi();
+    const { data } = await storyblokApi.get("cdn/stories/home", {
+      version: "draft",
+    });
   });
 </script>
 ```
 
-You can pass [Bridge options](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue) as a third parameter as well:
+> Note: you can skip using `storyblokApi` if you prefer your own method or function to fetch your data.
+
+#### 2. Listen to Storyblok Visual Editor events
+
+Use `useStoryBridge` to get new stories every time a change event is triggered from the Visual Editor. You need to pass the story id as first param, and a callback function as second param to update the new story:
+
+```html
+<script>
+  import { onMount } from "svelte";
+  import { useStoryblokApi, useStoryblokBridge } from "@storyblok/svelte";
+
+  let story = null;
+
+  onMount(async () => {
+    const storyblokApi = useStoryblokApi();
+    const { data } = await storyblokApi.get("cdn/stories/home", {
+      version: "draft",
+    });
+    story = data.story;
+    useStoryblokBridge(story.id, (newStory) => (story = newStory));
+  });
+</script>
+```
+
+You can pass [Bridge options](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte) as a third parameter as well:
 
 ```js
-useStoryblokBridge(state.story.id, (story) => (state.story = story), {
+useStoryblokBridge(story.id, (newStory) => (story = newStory), {
   resolveRelations: ["Article.author"],
 });
 ```
 
 #### 3. Link your components to Storyblok Visual Editor
 
-For every component you've defined in your Storyblok space, add the `v-editable` directive with the blok content:
+For every component you've defined in your Storyblok space, add the `StoryblokComponent` with the blok content:
 
 ```html
-<template>
-  <div v-editable="blok"><!-- ... --></div>
-</template>
+<StoryblokComponent {blok} />
 ```
 
-Where `blok` is the actual blok data coming from [Storblok's Content Delivery API](https://www.storyblok.com/docs/api/content-delivery?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue).
-
-Check out the [playground](/../../tree/master/playground-vca) for a full example.
-
-### Options API
-
-You can use Options API as well, accessing the api client via `this.$storyblokApi`:
-
-```js
-import { useStoryblokBridge } from "@storyblok/vue";
-
-export default {
-  data: () => ({
-    story: [],
-  }),
-  async created() {
-    const { data } = this.$storyblokApi.get(/* ... */);
-    this.story = data.story;
-  },
-  mounted() {
-    useStoryblokBridge(this.story.id, (evStory) => (this.story = evStory));
-  },
-};
-```
+> The `blok` is the actual blok data coming from [Storblok's Content Delivery API](https://www.storyblok.com/docs/api/content-delivery?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
 
 ### Features and API
 
@@ -192,7 +159,7 @@ You can **choose the features to use** when you initialize the plugin. In that w
 You can use an `apiOptions` object. This is passed down to the (storyblok-js-client config object](https://github.com/storyblok/storyblok-js-client#class-storyblok):
 
 ```js
-app.use(StoryblokVue, {
+storyblokInit({
   accessToken: "<your-token>",
   apiOptions: {
     //storyblok-js-client config object
@@ -204,16 +171,12 @@ app.use(StoryblokVue, {
 
 If you prefer to use your own fetch method, just remove the `apiPlugin` and `storyblok-js-client` won't be added to your application.
 
-```js
-app.use(StoryblokVue);
-```
-
 #### Storyblok Bridge
 
 You can conditionally load it by using the `bridge` option. Very useful if you want to disable it in production:
 
 ```js
-app.use(StoryblokVue, {
+storyblokInit({
   bridge: process.env.NODE_ENV !== "production",
 });
 ```
@@ -230,12 +193,12 @@ sbBridge.on(["input", "published", "change"], (event) => {
 
 ### Compatibility
 
-This plugin is for Vue 3. Thus, it supports the [same browsers as Vue 3](https://github.com/vuejs/rfcs/blob/master/active-rfcs/0038-vue3-ie11-support.md). In short: all modern browsers, dropping IE support.
+This plugin is for Svelte. Thus, it supports the [same browsers as Svelte 3](https://github.com/sveltejs/svelte/issues/558). In short: all modern browsers, dropping IE support.
 
 ## 🔗 Related Links
 
-- **[Add a headless CMS to Vue.js in 5 minutes](https://www.storyblok.com/tp/add-a-headless-CMS-to-vuejs-in-5-minutes?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue)**: Quick-start guide on getting up and running with Storyblok and Vue.
-- **[Storyblok & Vue.js on GitHub](https://github.com/search?q=org%3Astoryblok+topic%3Avue)**: Check all of our Vue.js open source repos.
+- **[Add a headless CMS to Svelte in 5 minutes](https://www.storyblok.com/tp/add-a-headless-cms-to-svelte-in-5-minutes?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)**: Quick-start guide on getting up and running with Storyblok and Vue.
+- **[Storyblok & Vue.js on GitHub](https://github.com/search?q=org%3Astoryblok+topic%3Asvelte)**: Check all of our Vue.js open source repos.
 - **[Storyblok CLI](https://github.com/storyblok/storyblok)**: A simple CLI for scaffolding Storyblok projects and fieldtypes.
 
 ## ℹ️ More Resources
@@ -247,5 +210,5 @@ This plugin is for Vue 3. Thus, it supports the [same browsers as Vue 3](https:/
 
 ### Contributing
 
-Please see our [contributing guidelines](https://github.com/storyblok/.github/blob/master/contributing.md) and our [code of conduct](https://www.storyblok.com/trust-center#code-of-conduct?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-vue).
+Please see our [contributing guidelines](https://github.com/storyblok/.github/blob/master/contributing.md) and our [code of conduct](https://www.storyblok.com/trust-center#code-of-conduct?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
 This project use [semantic-release](https://semantic-release.gitbook.io/semantic-release/) for generate new versions by using commit messages and we use the Angular Convention to naming the commits. Check [this question](https://semantic-release.gitbook.io/semantic-release/support/faq#how-can-i-change-the-type-of-commits-that-trigger-a-release) about it in semantic-release FAQ.
