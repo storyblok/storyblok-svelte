@@ -22,7 +22,7 @@ jobs:
       - name: Enable auto-merge for Dependabot PRs (patch)
         if: ${{contains(steps.metadata.outputs.dependency-names, env.DEPENDENCY) && steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
         run: >
-          gh pr merge --auto --merge "$PR_URL" -b fix: merge commit
+          gh pr merge --auto --merge "$PR_URL" -b "fix: merge commit"
         env:
           DEPENDENCY: "@storyblok/js"
           PR_URL: ${{github.event.pull_request.html_url}}
