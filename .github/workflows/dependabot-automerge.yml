@@ -21,14 +21,16 @@ jobs:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: Enable auto-merge for Dependabot PRs (patch)
         if: ${{contains(steps.metadata.outputs.dependency-names, env.DEPENDENCY) && steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
-        run: gh pr merge --auto --merge "$PR_URL" -b "fix: merge commit"
+        run: >
+          gh pr merge --auto --merge "$PR_URL" -b fix: merge commit
         env:
           DEPENDENCY: "@storyblok/js"
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: Enable auto-merge for Dependabot PRs (minor)
         if: ${{contains(steps.metadata.outputs.dependency-names, env.DEPENDENCY) && steps.metadata.outputs.update-type == 'version-update:semver-minor'}}
-        run: gh pr merge --auto --merge "$PR_URL" -b "feat: merge commit"
+        run: >
+          gh pr merge --auto --merge "$PR_URL" -b "feat: merge commit"
         env:
           DEPENDENCY: "@storyblok/js"
           PR_URL: ${{github.event.pull_request.html_url}}
