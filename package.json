@@ -19,7 +19,7 @@
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
-    "eslint": "^8.2.0",
+    "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.4.0",
     "husky": "^7.0.4",
