@@ -7,21 +7,19 @@
     useStoryblokBridge,
     StoryblokComponent,
   } from "@storyblok/svelte";
-  import Teaser from "./Teaser.svelte";
+
+  export let accessToken;
+  export let bridge;
+  export let components;
+  export let blok;
 
   storyblokInit({
-    accessToken: "randomToken",
-    use: [apiPlugin],
-    components: {
-      teaser: Teaser,
-    },
+    accessToken,
+    bridge,
+    use: accessToken ? [apiPlugin] : [],
+    components,
+    blok,
   });
-
-  const blok = {
-    component: "teaser",
-    headline: "Hello Svelte",
-    _editable: `<!--#storyblok#{ "id": 12345, "uid": "fc34-uad1"}-->`,
-  };
 
   const storyblokApi = useStoryblokApi();
   const apiExists = !!(storyblokApi && typeof storyblokApi.get === "function");
@@ -31,9 +29,9 @@
 
 <div>
   <h2>Svelte Testing Component</h2>
-  <div data-test="editable">
-    <StoryblokComponent {blok} />
-  </div>
+  {#if blok}
+    <StoryblokComponent data-test="editable" />
+  {/if}
 
   <h3>
     <code>storyblokApi.get:</code>
