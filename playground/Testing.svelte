@@ -29,10 +29,7 @@
 
 <div>
   <h2>Svelte Testing Component</h2>
-  {#if blok}
-    <StoryblokComponent data-test="editable" />
-  {/if}
-
+  <StoryblokComponent {blok} />
   <h3>
     <code>storyblokApi.get:</code>
     <span data-test="api">{apiExists}</span>
