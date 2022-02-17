@@ -37,7 +37,8 @@
 
 - Providing a `storyblokApi` object in your app, which is an instance of [storyblok-js-client](https://github.com/storyblok/storyblok-js-client)
 - Enabling real time editing through the [Storyblok Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
-- Providing the `StoryblokComponent` to link editable components to the Storyblok Visual Editor
+- Providing the `StoryblokComponent`, which enables dynamic component
+- Providing the `StoryblokEditable` to link editable components to the Storyblok Visual Editor
 
 ## Usage
 
@@ -64,7 +65,7 @@ storyblokInit({
   // apiOptions: {  },
   use: [apiPlugin],
   components: {
-    // teaser: () => import("./Teaser.svelte"),
+    // teaser: () => import("./Teaser.svelte"), // Dynamic import
     teaser: Teaser,
   },
 });
@@ -76,7 +77,7 @@ storyblokInit({
 
 The Storyblok Component helper function loads and resolves all components dynamically end enables lazy loading them with the `getComponent` function.
 
-That's it! All the features are enabled for you: the _Api Client_ for interacting with [Storyblok CDN API](https://www.storyblok.com/docs/api/content-delivery#topics/introduction?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte), and _Storyblok Bridge_ for [real-time visual editing experience](https://www.storyblok.com/docs/guide/essentials/visual-editor?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
+Now, all features are enabled for you: the _Api Client_ for interacting with [Storyblok CDN API](https://www.storyblok.com/docs/api/content-delivery#topics/introduction?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte), and _Storyblok Bridge_ for [real-time visual editing experience](https://www.storyblok.com/docs/guide/essentials/visual-editor?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
 
 > You can enable/disable some of these features if you don't need them, so you save some KB. Please read the "Features and API" section
 
@@ -142,13 +143,21 @@ useStoryblokBridge(story.id, (newStory) => (story = newStory), {
 
 #### 3. Link your components to Storyblok Visual Editor
 
-For every component you've defined in your Storyblok space, add the `StoryblokComponent` with the blok content:
+For every component you've defined in your Storyblok space, add the `storyblokEditable` with the blok content:
+
+```html
+<div use:storyblokEditable={blok} / >
+```
+
+> The `blok` is the actual blok data coming from [Storblok's Content Delivery API](https://www.storyblok.com/docs/api/content-delivery?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
+
+<!-- TODO: What about the StoryblokComponent? Where do we use that?  -->
+
+If you would like to use dynamic component loading, make sure to use the `StorybloKComponent`an use dynamic import when adding the components to your list.
 
 ```html
 <StoryblokComponent {blok} />
 ```
-
-> The `blok` is the actual blok data coming from [Storblok's Content Delivery API](https://www.storyblok.com/docs/api/content-delivery?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
 
 ### Features and API
 
@@ -156,7 +165,7 @@ You can **choose the features to use** when you initialize the plugin. In that w
 
 #### Storyblok API
 
-You can use an `apiOptions` object. This is passed down to the (storyblok-js-client config object](https://github.com/storyblok/storyblok-js-client#class-storyblok):
+You can use an `apiOptions` object. This is passed down to the [storyblok-js-client config object](https://github.com/storyblok/storyblok-js-client#class-storyblok):
 
 ```js
 storyblokInit({
@@ -169,7 +178,7 @@ storyblokInit({
 });
 ```
 
-If you prefer to use your own fetch method, just remove the `apiPlugin` and `storyblok-js-client` won't be added to your application.
+If you prefer to use your own fetch method, just remove the `apiPlugin` and `storyblok-js-client` won't be added to your application. You can find out more about our [Content Delivery API](https://www.storyblok.com/docs/api/content-delivery) in the documentation.
 
 #### Storyblok Bridge
 
@@ -191,6 +200,8 @@ sbBridge.on(["input", "published", "change"], (event) => {
 });
 ```
 
+For background information on the [Storyblok JS Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js), please check out documentation.
+
 ### Compatibility
 
 This plugin is for Svelte. Thus, it supports the [same browsers as Svelte 3](https://github.com/sveltejs/svelte/issues/558). In short: all modern browsers, dropping IE support.
@@ -198,8 +209,8 @@ This plugin is for Svelte. Thus, it supports the [same browsers as Svelte 3](htt
 ## 🔗 Related Links
 
 - **[Add a headless CMS to Svelte in 5 minutes](https://www.storyblok.com/tp/add-a-headless-cms-to-svelte-in-5-minutes?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)**: Quick-start guide on getting up and running with Storyblok and Vue.
-- **[Storyblok & Vue.js on GitHub](https://github.com/search?q=org%3Astoryblok+topic%3Asvelte)**: Check all of our Vue.js open source repos.
 - **[Storyblok CLI](https://github.com/storyblok/storyblok)**: A simple CLI for scaffolding Storyblok projects and fieldtypes.
+- [Svelte Documentation](https://svelte.dev/docs)
 
 ## ℹ️ More Resources
 
@@ -211,4 +222,4 @@ This plugin is for Svelte. Thus, it supports the [same browsers as Svelte 3](htt
 ### Contributing
 
 Please see our [contributing guidelines](https://github.com/storyblok/.github/blob/master/contributing.md) and our [code of conduct](https://www.storyblok.com/trust-center#code-of-conduct?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
-This project use [semantic-release](https://semantic-release.gitbook.io/semantic-release/) for generate new versions by using commit messages and we use the Angular Convention to naming the commits. Check [this question](https://semantic-release.gitbook.io/semantic-release/support/faq#how-can-i-change-the-type-of-commits-that-trigger-a-release) about it in semantic-release FAQ.
+This project uses [semantic-release](https://semantic-release.gitbook.io/semantic-release/) for generate new versions by using commit messages and we use the [Angular Convention](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#) to naming the commits. Check [this question](https://semantic-release.gitbook.io/semantic-release/support/faq#how-can-i-change-the-type-of-commits-that-trigger-a-release) about it in semantic-release FAQ.
