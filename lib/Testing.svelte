@@ -6,7 +6,7 @@
     useStoryblokApi,
     useStoryblokBridge,
     StoryblokComponent,
-  } from "@storyblok/svelte";
+  } from "./index.js";
 
   export let accessToken;
   export let bridge;
