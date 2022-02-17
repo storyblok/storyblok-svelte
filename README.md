@@ -1,6 +1,6 @@
 <div align="center">
 	<a href="https://www.storyblok.com?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte"  align="center">
-		<img src="https://a.storyblok.com/f/88751/1776x360/a7d027d26d/sb-svelte.png"  alt="Storyblok Logo">
+		<img src="https://a.storyblok.com/f/88751/1776x360/783760dfac/storybloksvelte.png"  alt="Storyblok Logo">
 	</a>
 	<h1 align="center">@storyblok/svelte</h1>
   <p align="center">
@@ -9,7 +9,6 @@
   <br />
 </div>
 
- <!-- TODO: add correct link to NPM  -->
 <p align="center">
   <a href="https://npmjs.com/package/@storyblok/svelte">
     <img src="https://img.shields.io/npm/v/@storyblok-svelte/latest.svg?style=flat-square" alt="Storyblok Svelte" />
@@ -31,14 +30,13 @@
   </a>
 </p>
 
-## TL; DR -
+## TL; DR
 
 `@storyblok/svelte` helps you connect your Svelte project to Storyblok by:
 
-- Providing a `storyblokApi` object in your app, which is an instance of [storyblok-js-client](https://github.com/storyblok/storyblok-js-client)
+- Providing the `useStoryblokApi` function to interact with the Storyblok APIs, using the [storyblok-js-client](https://github.com/storyblok/storyblok-js-client)
 - Enabling real time editing through the [Storyblok Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
-- Providing the `StoryblokComponent`, which enables dynamic component
-- Providing the `StoryblokEditable` to link editable components to the Storyblok Visual Editor
+- Providing the `StoryblokComponent` which allows you to connect your components to the Storyblok Visual Editor
 
 ## Usage
 
@@ -204,7 +202,7 @@ For background information on the [Storyblok JS Bridge](https://www.storyblok.co
 
 ### Compatibility
 
-This plugin is for Svelte. Thus, it supports the [same browsers as Svelte 3](https://github.com/sveltejs/svelte/issues/558). In short: all modern browsers, dropping IE support.
+This plugin is for Svelte. Thus, it supports the [same browsers as Svelte 3](https://github.com/sveltejs/svelte/issues/558). In short: all modern browsers and IE10+.
 
 ## 🔗 Related Links
 
