@@ -71,10 +71,6 @@ storyblokInit({
 
 > Add all your components to the components object in the storyblokInit function. You can either load all of them at the same time by adding them to the list; or you could lazy load them when they are needed by uncommenting the dynamic import line.
 
-### Storyblok Component
-
-The Storyblok Component helper function loads and resolves all components dynamically end enables lazy loading them with the `getComponent` function.
-
 Now, all features are enabled for you: the _Api Client_ for interacting with [Storyblok CDN API](https://www.storyblok.com/docs/api/content-delivery#topics/introduction?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte), and _Storyblok Bridge_ for [real-time visual editing experience](https://www.storyblok.com/docs/guide/essentials/visual-editor?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
 
 > You can enable/disable some of these features if you don't need them, so you save some KB. Please read the "Features and API" section
