@@ -63,7 +63,7 @@ storyblokInit({
   // apiOptions: {  },
   use: [apiPlugin],
   components: {
-    // teaser: () => import("./Teaser.svelte"), // Dynamic import
+    // teaser: () => import("./Teaser.svelte"), // Lazy load it on demand
     teaser: Teaser,
   },
 });
@@ -79,7 +79,7 @@ Now, all features are enabled for you: the _Api Client_ for interacting with [St
 
 > You can enable/disable some of these features if you don't need them, so you save some KB. Please read the "Features and API" section
 
-#### From a CDN
+### From a CDN
 
 Install the file from the CDN and access the methods via `window.storyblokSvelte`:
 
@@ -87,11 +87,11 @@ Install the file from the CDN and access the methods via `window.storyblokSvelte
 <script src="https://unpkg.com/@storyblok/svelte"></script>
 ```
 
-### Getting started
+## Getting started
 
-#### 1. Fetching Content
+### 1. Fetching Content
 
-On Mount, we are calling the `useStoryblokApi()`, which asyncronously gets all stories from the CDN in drafting stage.
+Use the `useStoryblokApi()` gets your stories from the Storyblok CDN API:
 
 ```html
 <script>
@@ -109,9 +109,9 @@ On Mount, we are calling the `useStoryblokApi()`, which asyncronously gets all s
 
 > Note: you can skip using `storyblokApi` if you prefer your own method or function to fetch your data.
 
-#### 2. Listen to Storyblok Visual Editor events
+### 2. Listen to Storyblok Visual Editor events
 
-Use `useStoryBridge` to get new stories every time a change event is triggered from the Visual Editor. You need to pass the story id as first param, and a callback function as second param to update the new story:
+Use `useStoryBridge` to get the updated story every time a change event is triggered from the Visual Editor. You need to pass the story id as first param, and a callback function as second param to update the new story:
 
 ```html
 <script>
@@ -139,23 +139,27 @@ useStoryblokBridge(story.id, (newStory) => (story = newStory), {
 });
 ```
 
-#### 3. Link your components to Storyblok Visual Editor
+### 3. Link your components to Storyblok Visual Editor
 
-For every component you've defined in your Storyblok space, add the `storyblokEditable` with the blok content:
+In order to link the storyblok components, you have to
+
+- Load them in components when calling `storyblokInit`
+
+> If you would like to use dynamic component loading, make sure to use the `StorybloKComponent`an use dynamic import when adding the components to your list.
+
+- Use the `storyblokEditable` svelte action on the root element of each component
 
 ```html
 <div use:storyblokEditable={blok} / >
 ```
 
-> The `blok` is the actual blok data coming from [Storblok's Content Delivery API](https://www.storyblok.com/docs/api/content-delivery?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
-
-<!-- TODO: What about the StoryblokComponent? Where do we use that?  -->
-
-If you would like to use dynamic component loading, make sure to use the `StorybloKComponent`an use dynamic import when adding the components to your list.
+- Use the `StoryblokComponent` to load them by passing the blok property
 
 ```html
 <StoryblokComponent {blok} />
 ```
+
+> The `blok` is the actual blok data coming from [Storblok's Content Delivery API](https://www.storyblok.com/docs/api/content-delivery?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
 
 ### Features and API
 
