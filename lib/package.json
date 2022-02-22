@@ -6,7 +6,9 @@
   "module": "./dist/storyblok-svelte.mjs",
   "svelte": "index.js",
   "files": [
-    "dist"
+    "dist",
+    "index.js",
+    "StoryblokComponent.svelte"
   ],
   "exports": {
     ".": {
