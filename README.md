@@ -32,13 +32,13 @@
   </a>
 </p>
 
-## 🔎 TL; DR
+<!-- ## 🔎 TL; DR
 
 `@storyblok/svelte` helps you connect your Svelte project to Storyblok by:
 
 - Providing the `useStoryblokApi` function to interact with the Storyblok APIs, using the [storyblok-js-client](https://github.com/storyblok/storyblok-js-client)
 - Enabling real time editing through the [Storyblok Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
-- Providing the `StoryblokComponent` which allows you to connect your components to the Storyblok Visual Editor
+- Providing the `StoryblokComponent` which allows you to connect your components to the Storyblok Visual Editor -->
 
 ## 🚀 Usage
 
