@@ -1,6 +1,6 @@
 {
   "name": "@storyblok/svelte",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Storyblok SDK to connect Storyblok with Svelte",
   "main": "./dist/storyblok-svelte.js",
   "module": "./dist/storyblok-svelte.mjs",
