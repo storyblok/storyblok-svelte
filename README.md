@@ -65,13 +65,12 @@ storyblokInit({
   // apiOptions: {  },
   use: [apiPlugin],
   components: {
-    // teaser: () => import("./Teaser.svelte"), // Lazy load it on demand
     teaser: Teaser,
   },
 });
 ```
 
-> Add all your components to the components object in the storyblokInit function. You can either load all of them at the same time by adding them to the list; or you could lazy load them when they are needed by uncommenting the dynamic import line.
+> Add all your components to the components object in the storyblokInit function. You can load all of them at the same time by adding them to the list.
 
 Now, all features are enabled for you: the _Api Client_ for interacting with [Storyblok CDN API](https://www.storyblok.com/docs/api/content-delivery/v2?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte), and _Storyblok Bridge_ for [real-time visual editing experience](https://www.storyblok.com/docs/guide/essentials/visual-editor?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
 
@@ -142,8 +141,6 @@ useStoryblokBridge(story.id, (newStory) => (story = newStory), {
 In order to link the storyblok components, you have to
 
 - Load them in components when calling `storyblokInit`
-
-> If you would like to use dynamic component loading, make sure to use the `StorybloKComponent`an use dynamic import when adding the components to your list.
 
 - Use the `storyblokEditable` svelte action on the root element of each component
 
