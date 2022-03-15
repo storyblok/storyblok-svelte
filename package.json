@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "workspaces": [
     "./lib",
-    "./playground"
+    "./playground",
+    "./playground-sveltekit"
   ],
   "scripts": {
     "dev": "npm run dev --workspace=lib & npm run demo",
