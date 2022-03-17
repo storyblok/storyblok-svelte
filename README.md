@@ -142,7 +142,7 @@ In order to link the storyblok components, you have to
 
 - Load them in components when calling `storyblokInit`
 
-- Use the `storyblokEditable` svelte action on the root element of each component
+- Use the `storyblokEditable` action on the root element of each component
 
 ```html
 <div use:storyblokEditable={blok} / >

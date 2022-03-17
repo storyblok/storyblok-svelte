@@ -9,8 +9,7 @@
   let story = null;
 
   onMount(async () => {
-    const sbApi = useStoryblokApi();
-    const { data } = await sbApi.get("cdn/stories/home", {
+    const { data } = await useStoryblokApi().get("cdn/stories/svelte", {
       version: "draft",
     });
     story = data.story;
@@ -19,13 +18,11 @@
   });
 </script>
 
-<main>
+<div>
   {#if story}
-    {#each story.content.body as blok}
-      <StoryblokComponent {blok} />
-    {/each}
+    <StoryblokComponent blok={story.content} />
   {/if}
-</main>
+</div>
 
 <style>
   :root {
