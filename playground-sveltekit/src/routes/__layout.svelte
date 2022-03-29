@@ -1,4 +1,4 @@
-<script>
+<script context="module">
   import { storyblokInit, apiPlugin } from "@storyblok/svelte";
   import Feature from "../components/Feature.svelte";
   import Grid from "../components/Grid.svelte";
@@ -9,15 +9,12 @@
     accessToken: "OurklwV5XsDJTIE1NJaD2wtt",
     use: [apiPlugin],
     components: {
-      // teaser: () => import("./Teaser.svelte"), // Lazy load it on demand
       feature: Feature,
       grid: Grid,
       page: Page,
       teaser: Teaser,
     },
   });
-
-  console.log("teaser", Teaser);
 </script>
 
 <main>

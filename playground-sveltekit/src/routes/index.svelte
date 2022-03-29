@@ -8,7 +8,6 @@
     });
 
     return {
-      status: 200,
       props: { story: data.story },
     };
   }
@@ -19,7 +18,6 @@
   import { useStoryblokBridge, StoryblokComponent } from "@storyblok/svelte";
 
   export let story;
-  console.log(story, "story");
 
   onMount(() => {
     useStoryblokBridge(story.id, (newStory) => (story = newStory));

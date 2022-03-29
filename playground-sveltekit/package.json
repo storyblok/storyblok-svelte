@@ -1,20 +1,16 @@
 {
-  "name": "my-app",
+  "name": "@storyblok/playground-sveltekit",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "package": "svelte-kit package",
-    "preview": "svelte-kit preview"
+    "demo": "vite"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "svelte": "^3.44.0"
   },
   "type": "module",
   "dependencies": {
-    "@storyblok/svelte": "^1.0.1",
+    "@storyblok/svelte": "^2.0.1",
     "axios": "^0.26.1"
   }
 }
