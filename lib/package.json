@@ -29,7 +29,7 @@
     "@storyblok/js": "^1.0.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.0",
+    "@babel/core": "^7.17.8",
     "@cypress/vite-dev-server": "^2.2.2",
     "babel-jest": "^27.5.1",
     "cypress": "^9.4.1",
