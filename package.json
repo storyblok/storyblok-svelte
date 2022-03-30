@@ -22,7 +22,7 @@
     "@commitlint/config-conventional": "^14.1.0",
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-svelte3": "^3.4.0",
+    "eslint-plugin-svelte3": "^3.4.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
     "patch-package": "^6.4.7",
