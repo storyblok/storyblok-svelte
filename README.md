@@ -36,7 +36,7 @@
 
 `@storyblok/svelte` helps you connect your Svelte project to Storyblok by:
 
-- Providing the `useStoryblokApi` function to interact with the Storyblok APIs, using the [storyblok-js-client](https://github.com/storyblok/storyblok-js-client)
+- Providing the `getStoryblokApi` function to interact with the Storyblok APIs, using the [storyblok-js-client](https://github.com/storyblok/storyblok-js-client)
 - Enabling real time editing through the [Storyblok Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
 - Providing the `StoryblokComponent` which allows you to connect your components to the Storyblok Visual Editor -->
 
@@ -88,15 +88,15 @@ Install the file from the CDN and access the methods via `window.storyblokSvelte
 
 ### 1. Fetching Content
 
-Use the `useStoryblokApi()` gets your stories from the Storyblok CDN API:
+Use the `getStoryblokApi()` gets your stories from the Storyblok CDN API:
 
 ```html
 <script>
   import { onMount } from "svelte";
-  import { useStoryblokApi } from "@storyblok/svelte";
+  import { getStoryblokApi } from "@storyblok/svelte";
 
   onMount(async () => {
-    const storyblokApi = useStoryblokApi();
+    const storyblokApi = getStoryblokApi();
     const { data } = await storyblokApi.get("cdn/stories/home", {
       version: "draft",
     });
@@ -113,12 +113,12 @@ Use `useStoryBridge` to get the updated story every time a change event is trigg
 ```html
 <script>
   import { onMount } from "svelte";
-  import { useStoryblokApi, useStoryblokBridge } from "@storyblok/svelte";
+  import { getStoryblokApi, useStoryblokBridge } from "@storyblok/svelte";
 
   let story = null;
 
   onMount(async () => {
-    const storyblokApi = useStoryblokApi();
+    const storyblokApi = getStoryblokApi();
     const { data } = await storyblokApi.get("cdn/stories/home", {
       version: "draft",
     });
