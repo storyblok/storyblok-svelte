@@ -5,7 +5,7 @@
     "demo": "vite"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.32",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.40",
     "svelte": "^3.44.3",
     "vite": "^2.9.0"
   }
