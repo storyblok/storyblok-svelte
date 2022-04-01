@@ -3,7 +3,7 @@
   import {
     storyblokInit,
     apiPlugin,
-    useStoryblokApi,
+    getStoryblokApi,
     useStoryblokBridge,
     StoryblokComponent,
   } from "./index.js";
@@ -21,7 +21,7 @@
     blok,
   });
 
-  const storyblokApi = useStoryblokApi();
+  const storyblokApi = getStoryblokApi();
   const apiExists = !!(storyblokApi && typeof storyblokApi.get === "function");
 
   onMount(() => useStoryblokBridge(43423, (newStory) => console.log(newStory)));

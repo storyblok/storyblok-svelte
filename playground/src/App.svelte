@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import {
-    useStoryblokApi,
+    getStoryblokApi,
     useStoryblokBridge,
     StoryblokComponent,
   } from "@storyblok/svelte";
@@ -9,7 +9,8 @@
   let story = null;
 
   onMount(async () => {
-    const { data } = await useStoryblokApi().get("cdn/stories/svelte", {
+    const sbApi = getStoryblokApi();
+    const { data } = await sbApi.get("cdn/stories/home", {
       version: "draft",
     });
     story = data.story;
