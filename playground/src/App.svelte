@@ -10,7 +10,7 @@
 
   onMount(async () => {
     const sbApi = getStoryblokApi();
-    const { data } = await sbApi.get("cdn/stories/home", {
+    const { data } = await sbApi.get("cdn/stories/svelte", {
       version: "draft",
     });
     story = data.story;
