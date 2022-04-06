@@ -6,7 +6,6 @@
     "build": "svelte-kit build"
   },
   "devDependencies": {
-    "svelte": "^3.44.0",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "svelte": "^3.46.6"
