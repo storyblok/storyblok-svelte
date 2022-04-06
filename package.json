@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "npm run dev --workspace=lib & npm run demo",
     "demo": "npm run demo --workspace=playground",
-    "demo-vca": "npm run demo --workspace=playground-vca",
+    "demo-sveltekit": "npm run dev --workspace=playground-sveltekit",
     "build": "npm run build --workspace=lib",
     "test:unit": "npm run test:unit --workspace=lib",
     "test:e2e": "npm run test:e2e --workspace=lib",

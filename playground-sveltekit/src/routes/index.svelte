@@ -1,14 +1,13 @@
 <script context="module">
-  import { useStoryblokApi } from "@storyblok/svelte";
+  import { getStoryblokApi } from "@storyblok/svelte";
 
   export async function load() {
-    const storyblokApi = useStoryblokApi();
+    const storyblokApi = getStoryblokApi();
     const { data } = await storyblokApi.get("cdn/stories/svelte", {
       version: "draft",
     });
 
     return {
-      status: 200,
       props: { story: data.story },
     };
   }
@@ -19,7 +18,6 @@
   import { useStoryblokBridge, StoryblokComponent } from "@storyblok/svelte";
 
   export let story;
-  console.log(story, "story");
 
   onMount(() => {
     useStoryblokBridge(story.id, (newStory) => (story = newStory));
