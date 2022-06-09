@@ -4,8 +4,13 @@ import {
 } from "@storyblok/js";
 export { useStoryblokBridge, apiPlugin } from "@storyblok/js";
 
-export const storyblokEditable = (node, value) => {
-  const updateDom = (value) => {
+import type { SbSvelteSDKOptions, SbSvelteComponentsMap, StoryblokClient, SbBlokData, StoryblokComponentType } from "./types";
+
+export const storyblokEditable = (
+  node: HTMLElement,
+  value: SbBlokData
+  ) => {
+  const updateDom = (value: SbBlokData) => {
     const options = sbEdit(value);
     if (options["data-blok-c"]) {
       node.setAttribute("data-blok-c", options["data-blok-c"]);
@@ -17,14 +22,15 @@ export const storyblokEditable = (node, value) => {
   updateDom(value); // when is mounted
 
   return {
-    update(newValue) {
+    update(newValue: SbBlokData) {
       // when value changes
       updateDom(newValue);
     },
   };
 };
 
-let storyblokApiInstance = null;
+
+let storyblokApiInstance: StoryblokClient = null;
 export const useStoryblokApi = () => {
   if (!storyblokApiInstance) {
     console.log(
@@ -36,15 +42,17 @@ export const useStoryblokApi = () => {
 
 export { useStoryblokApi as getStoryblokApi };
 
-let componentsMap = null;
-export const storyblokInit = (options) => {
+let componentsMap: SbSvelteComponentsMap = null;
+
+export const storyblokInit = (options: SbSvelteSDKOptions) => {
   const { storyblokApi } = sbInit(options);
   storyblokApiInstance = storyblokApi;
   componentsMap = options.components || {};
 };
 
-export const getComponent = (componentName) => {
+export const getComponent = (componentName: string) => {
   const component = componentsMap[componentName];
+
   if (!component) {
     console.error(`You didn't load the ${componentName} component. Please load it in storyblokInit. For example:
 storyblokInit({
