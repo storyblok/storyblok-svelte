@@ -2,7 +2,7 @@
     "compilerOptions": {
       "module": "commonjs",
       "isolatedModules": true,
-      "target": "ES2015",
+      "target": "es2017",
       "strict": false,
       "esModuleInterop": true,
       "skipLibCheck": true,
@@ -13,7 +13,7 @@
     },
     "extends": "@tsconfig/svelte/tsconfig.json",
     "$schema": "https://json.schemastore.org/tsconfig",
-    "display": "Recommended",
-    "include": ["src/**/*","./index.ts", "./modules"],
+    "display": "Svelte",
+    "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
     "exclude": ["node_modules/*"]
   }
