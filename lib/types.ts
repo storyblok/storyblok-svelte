@@ -1,7 +1,8 @@
 import type { SbSDKOptions } from "@storyblok/js";
+import type { SvelteComponent } from "svelte";
+
 export interface SbSvelteComponentsMap {
-  // eslint-disable-next-line no-unused-vars
-  [name: string]: any
+  [name: string]: typeof SvelteComponent;
 }
 
 export interface SbSvelteSDKOptions extends SbSDKOptions {

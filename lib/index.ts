@@ -4,12 +4,14 @@ import {
 } from "@storyblok/js";
 export { useStoryblokBridge, apiPlugin } from "@storyblok/js";
 
-import type { SbSvelteSDKOptions, SbSvelteComponentsMap, StoryblokClient, SbBlokData } from "./types";
+import type {
+  SbSvelteSDKOptions,
+  SbSvelteComponentsMap,
+  StoryblokClient,
+  SbBlokData,
+} from "./types";
 
-export const storyblokEditable = (
-  node: HTMLElement,
-  value: SbBlokData
-  ) => {
+export const storyblokEditable = (node: HTMLElement, value: SbBlokData) => {
   const updateDom = (value: SbBlokData) => {
     const options = sbEdit(value);
     if (options["data-blok-c"]) {
@@ -29,9 +31,8 @@ export const storyblokEditable = (
   };
 };
 
-
 let storyblokApiInstance: StoryblokClient = null;
-export const useStoryblokApi = () => {
+export const useStoryblokApi = (): StoryblokClient => {
   if (!storyblokApiInstance) {
     console.log(
       `You can't use getStoryblokApi if you're not loading apiPlugin.`
@@ -67,5 +68,5 @@ storyblokInit({
   return component;
 };
 
-export * from './types'
+export * from "./types";
 export { default as StoryblokComponent } from "./StoryblokComponent.svelte";

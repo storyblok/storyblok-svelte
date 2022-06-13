@@ -27,11 +27,13 @@
     "prepublishOnly": "npm run build && cp ../README.md ./"
   },
   "dependencies": {
-    "@storyblok/js": "^1.6.1"
+    "@storyblok/js": "^1.6.1",
+    "svelte-preprocess": "^4.10.7"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@cypress/vite-dev-server": "^2.2.3",
+    "@tsconfig/svelte": "^3.0.0",
     "babel-jest": "^27.5.1",
     "cypress": "^9.6.0",
     "cypress-svelte-unit-test": "^3.3.4",
