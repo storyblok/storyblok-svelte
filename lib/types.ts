@@ -1,22 +1,12 @@
-import type { SbBlokData, SbSDKOptions } from "@storyblok/js";
-import type { SvelteComponent, SvelteComponentTyped } from "svelte";
-
-export type SbSvelteComponent = typeof SvelteComponent;
-
+import type { SbSDKOptions } from "@storyblok/js";
 export interface SbSvelteComponentsMap {
-  [name: string]: SbSvelteComponent;
+  // eslint-disable-next-line no-unused-vars
+  [name: string]: any
 }
 
 export interface SbSvelteSDKOptions extends SbSDKOptions {
-  components: SbSvelteComponentsMap;
+  components?: SbSvelteComponentsMap;
 }
-
-interface StoryblokComponentProps {
-  blok: SbBlokData
-}
-
-export interface StoryblokComponentType extends SvelteComponentTyped<StoryblokComponentProps> {}
-
 
 export type {
   AlternateObject,

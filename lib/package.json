@@ -5,7 +5,7 @@
   "main": "./dist/storyblok-svelte.js",
   "module": "./dist/storyblok-svelte.mjs",
   "svelte": "index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/main.d.ts",
   "files": [
     "dist",
     "index.js",
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "dev": "vite build --watch",
-    "build": "vite build && cp ./index.d.ts dist",
+    "build": "vite build && tsc --project tsconfig.json && cp main.d.ts dist",
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "jest __tests__",
     "test:e2e": "cypress run-ct",

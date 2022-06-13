@@ -11,9 +11,9 @@ storyblokInit({
   use: [apiPlugin],
   components: {
     feature: Feature,
-    grid: Grid,
+    grid: Grid,  
     page: Page,
-    teaser: Teaser,
+    teaser: Teaser,   
   },
 });
 

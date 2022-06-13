@@ -4,7 +4,7 @@ import {
 } from "@storyblok/js";
 export { useStoryblokBridge, apiPlugin } from "@storyblok/js";
 
-import type { SbSvelteSDKOptions, SbSvelteComponentsMap, StoryblokClient, SbBlokData, StoryblokComponentType } from "./types";
+import type { SbSvelteSDKOptions, SbSvelteComponentsMap, StoryblokClient, SbBlokData } from "./types";
 
 export const storyblokEditable = (
   node: HTMLElement,
@@ -67,4 +67,5 @@ storyblokInit({
   return component;
 };
 
+export * from './types'
 export { default as StoryblokComponent } from "./StoryblokComponent.svelte";
