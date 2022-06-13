@@ -4,11 +4,11 @@
   "description": "Storyblok SDK to connect Storyblok with Svelte",
   "main": "./dist/storyblok-svelte.js",
   "module": "./dist/storyblok-svelte.mjs",
-  "svelte": "index.js",
+  "svelte": "index.ts",
   "types": "./dist/main.d.ts",
   "files": [
     "dist",
-    "index.js",
+    "index.ts",
     "StoryblokComponent.svelte"
   ],
   "exports": {
@@ -27,8 +27,7 @@
     "prepublishOnly": "npm run build && cp ../README.md ./"
   },
   "dependencies": {
-    "@storyblok/js": "^1.6.1",
-    "svelte-preprocess": "^4.10.7"
+    "@storyblok/js": "^1.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -40,6 +39,8 @@
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-jest": "^26.1.5",
     "jest": "^27.5.1",
+    "svelte-preprocess": "^4.10.7",
+    "typescript": "^4.7.3",
     "vite": "^2.9.9"
   },
   "eslintConfig": {
