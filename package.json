@@ -57,6 +57,7 @@
       "eslint:recommended",
       "prettier"
     ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "ecmaVersion": 2020,
       "sourceType": "module"
@@ -67,7 +68,8 @@
     },
     "ignorePatterns": "dist/",
     "plugins": [
-      "svelte3"
+      "svelte3", 
+      "@typescript-eslint"
     ],
     "overrides": [
       {
@@ -76,12 +78,19 @@
         ],
         "processor": "svelte3/svelte3"
       }
-    ]
+    ], 
+    "settings": {
+      "svelte3/typescript": true
+    }
   },
   "prettier": {
     "trailingComma": "es5",
     "tabWidth": 2,
     "semi": true,
     "singleQuote": false
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1"
   }
 }
