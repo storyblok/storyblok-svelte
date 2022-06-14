@@ -9,6 +9,7 @@
   "files": [
     "dist",
     "index.ts",
+    "types.ts",
     "StoryblokComponent.svelte"
   ],
   "exports": {
