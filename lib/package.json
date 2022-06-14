@@ -4,10 +4,11 @@
   "description": "Storyblok SDK to connect Storyblok with Svelte",
   "main": "./dist/storyblok-svelte.js",
   "module": "./dist/storyblok-svelte.mjs",
-  "svelte": "index.js",
+  "svelte": "index.ts",
+  "types": "./dist/main.d.ts",
   "files": [
     "dist",
-    "index.js",
+    "index.ts",
     "StoryblokComponent.svelte"
   ],
   "exports": {
@@ -18,7 +19,7 @@
   },
   "scripts": {
     "dev": "vite build --watch",
-    "build": "vite build",
+    "build": "vite build && tsc --project tsconfig.json && cp main.d.ts dist",
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "jest __tests__",
     "test:e2e": "cypress run-ct",
@@ -26,17 +27,20 @@
     "prepublishOnly": "npm run build && cp ../README.md ./"
   },
   "dependencies": {
-    "@storyblok/js": "^1.1.0"
+    "@storyblok/js": "^1.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@cypress/vite-dev-server": "^2.2.3",
+    "@tsconfig/svelte": "^3.0.0",
     "babel-jest": "^27.5.1",
     "cypress": "^9.6.0",
     "cypress-svelte-unit-test": "^3.3.4",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-jest": "^26.1.5",
     "jest": "^27.5.1",
+    "svelte-preprocess": "^4.10.7",
+    "typescript": "^4.7.3",
     "vite": "^2.9.9"
   },
   "eslintConfig": {

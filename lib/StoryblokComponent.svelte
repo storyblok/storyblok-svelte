@@ -1,7 +1,8 @@
 <script>
   import { getComponent } from "./index";
-  export let blok;
+
   let component;
+  export let blok;
 
   if (blok) {
     component = getComponent(blok.component);
@@ -10,4 +11,5 @@
   }
 </script>
 
+<!-- svelte-ignore missing-declaration -->
 <svelte:component this={component} {blok} {...$$restProps} />

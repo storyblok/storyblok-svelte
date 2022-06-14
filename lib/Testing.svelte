@@ -6,7 +6,7 @@
     getStoryblokApi,
     useStoryblokBridge,
     StoryblokComponent,
-  } from "./index.js";
+  } from "./index";
 
   export let accessToken;
   export let bridge;
