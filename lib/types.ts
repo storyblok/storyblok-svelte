@@ -26,6 +26,7 @@ export type {
   StoryblokCache,
   StoryblokCacheProvider,
   StoryblokClient,
+  StoryblokComponentType,
   StoryblokConfig,
   StoryblokManagmentApiResult,
   StoryblokResult,
