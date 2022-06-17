@@ -39,7 +39,7 @@
     "typescript": "^4.7.3"
   },
   "lint-staged": {
-    "*.{svelte,js,css}": [
+    "*.{svelte,js,css,ts}": [
       "prettier --write",
       "eslint"
     ],
@@ -68,7 +68,7 @@
     },
     "ignorePatterns": "dist/",
     "plugins": [
-      "svelte3", 
+      "svelte3",
       "@typescript-eslint"
     ],
     "overrides": [
@@ -78,7 +78,7 @@
         ],
         "processor": "svelte3/svelte3"
       }
-    ], 
+    ],
     "settings": {
       "svelte3/typescript": true
     }
