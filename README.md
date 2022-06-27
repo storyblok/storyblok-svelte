@@ -203,6 +203,24 @@ For background information on the [Storyblok JS Bridge](https://www.storyblok.co
 
 This plugin is for Svelte. Thus, it supports the [same browsers as Svelte 3](https://github.com/sveltejs/svelte/issues/558). In short: all modern browsers and IE10+.
 
+## Troubleshooting
+
+### Working with a Component Library
+
+When working with a component library, create an alias pointing '@storyblok/svelte' to './node_modules/@storyblok/svelte'. This will ensure the imported module will use the local version of storyblok. In your `svelte.config.js`, include:
+
+```js
+kit: {
+		alias: {
+			'@storyblok/svelte': './node_modules/@storyblok/svelte'
+		},
+
+```
+
+Any module importing @storyblok/svelte will now get it from the aliased location. For more information and alternatives to this solution, please see [npm link, peerDependencies and webpack](https://penx.medium.com/managing-dependencies-in-a-node-package-so-that-they-are-compatible-with-npm-link-61befa5aaca7).
+
+Another option might also be using npm / yarn workspaces.
+
 ## 🔗 Related Links
 
 - **[Add a headless CMS to Svelte in 5 minutes](https://www.storyblok.com/tp/add-a-headless-cms-to-svelte-in-5-minutes?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)**: Quick-start guide on getting up and running with Storyblok and Vue.
