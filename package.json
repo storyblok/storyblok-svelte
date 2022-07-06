@@ -33,7 +33,7 @@
     "patch-package": "^6.4.7",
     "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.7.0",
-    "svelte-check": "^2.7.2",
+    "svelte-check": "^2.8.0",
     "svelte-preprocess": "^4.10.7",
     "tslib": "^2.0.0",
     "typescript": "^4.7.3"
@@ -91,6 +91,6 @@
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.30.0",
-    "@typescript-eslint/parser": "^5.30.0"
+    "@typescript-eslint/parser": "^5.30.5"
   }
 }
