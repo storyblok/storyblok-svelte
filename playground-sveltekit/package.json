@@ -8,7 +8,7 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.48.0"
+    "svelte": "^3.49.0"
   },
   "type": "module",
   "dependencies": {
