@@ -199,6 +199,21 @@ sbBridge.on(["input", "published", "change"], (event) => {
 
 For background information on the [Storyblok JS Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte), please check out documentation.
 
+### Rendering Rich Text
+
+You can easily render rich text by using the `renderRichText`function that comes with `@storyblok/svelte`and Sveltes `{@html htmlstring}`directive.
+
+```html
+<script>
+  import { renderRichText } from "@storyblok/svelte";
+
+  export let blok;
+  $: articleHTML = renderRichText(blok.article);
+</script>
+
+<div>{@html articleHTML}</div>
+```
+
 ### Compatibility
 
 This plugin is for Svelte. Thus, it supports the [same browsers as Svelte 3](https://github.com/sveltejs/svelte/issues/558). In short: all modern browsers and IE10+.
