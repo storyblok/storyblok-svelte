@@ -90,9 +90,5 @@
     "tabWidth": 2,
     "semi": true,
     "singleQuote": false
-  },
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.30.0",
-    "@typescript-eslint/parser": "^5.30.5"
   }
 }
