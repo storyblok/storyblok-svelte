@@ -42,7 +42,7 @@
     "jest": "^27.5.1",
     "svelte-preprocess": "^4.10.7",
     "typescript": "^4.7.4",
-    "vite": "^2.9.13"
+    "vite": "^3.0.9"
   },
   "eslintConfig": {
     "env": {
