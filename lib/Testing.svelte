@@ -1,11 +1,10 @@
 <script>
-  import { onMount } from "svelte";
   import {
     storyblokInit,
     apiPlugin,
     getStoryblokApi,
-    useStoryblokBridge,
     StoryblokComponent,
+    getStoryblokBridge,
   } from "./index";
 
   export let accessToken;
@@ -24,7 +23,9 @@
   const storyblokApi = getStoryblokApi();
   const apiExists = !!(storyblokApi && typeof storyblokApi.get === "function");
 
-  onMount(() => useStoryblokBridge(43423, (newStory) => console.log(newStory)));
+  let story = getStoryblokBridge(43423, undefined);
+
+  $: console.log($story);
 </script>
 
 <div>

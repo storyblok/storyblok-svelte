@@ -1,8 +1,15 @@
 import {
   storyblokEditable as sbEdit,
   storyblokInit as sbInit,
+  useStoryblokBridge,
 } from "@storyblok/js";
-export { useStoryblokBridge, apiPlugin, renderRichText } from "@storyblok/js";
+import type {
+  StoryblokBridgeConfigV2,
+  StoryblokComponentType,
+  StoryData,
+} from "@storyblok/js";
+
+import { writable } from "svelte/store";
 
 import type {
   SbSvelteSDKOptions,
@@ -66,6 +73,28 @@ storyblokInit({
   }
 
   return component;
+};
+
+export const getStoryblokBridge = <
+  T extends StoryblokComponentType<string> = any
+>(
+  id: number,
+  initialValue: StoryData<T> = undefined,
+  options?: StoryblokBridgeConfigV2
+) => {
+  const store = writable<StoryData<T>>(initialValue);
+
+  // Use the useStoryblokBridge function to set the store value onChange
+  useStoryblokBridge<T>(
+    id,
+    (newStory) => {
+      store.set(newStory);
+    },
+    options
+  );
+
+  // Return only the subscribe method, so it can't be written to
+  return { subscribe: store.subscribe };
 };
 
 export * from "./types";
