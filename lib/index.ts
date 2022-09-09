@@ -2,7 +2,12 @@ import {
   storyblokEditable as sbEdit,
   storyblokInit as sbInit,
 } from "@storyblok/js";
-export { useStoryblokBridge, apiPlugin, renderRichText } from "@storyblok/js";
+export {
+  useStoryblokBridge,
+  apiPlugin,
+  renderRichText,
+  RichTextSchema,
+} from "@storyblok/js";
 
 import type {
   SbSvelteSDKOptions,
