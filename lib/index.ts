@@ -2,6 +2,9 @@ import {
   storyblokEditable as sbEdit,
   storyblokInit as sbInit,
   useStoryblokBridge,
+  renderRichText,
+  RichTextSchema,
+  apiPlugin
 } from "@storyblok/js";
 import type {
   StoryblokBridgeConfigV2,
