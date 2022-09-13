@@ -4,7 +4,7 @@ import {
   useStoryblokBridge,
   renderRichText,
   RichTextSchema,
-  apiPlugin
+  apiPlugin,
 } from "@storyblok/js";
 import type {
   StoryblokBridgeConfigV2,
@@ -78,9 +78,7 @@ storyblokInit({
   return component;
 };
 
-export const getStoryblokBridge = <
-  T extends StoryblokComponentType<string> = any
->(
+export const useStoryblok = <T extends StoryblokComponentType<string> = any>(
   id: number,
   initialValue: StoryData<T>,
   options: StoryblokBridgeConfigV2

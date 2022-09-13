@@ -4,7 +4,7 @@
     apiPlugin,
     getStoryblokApi,
     StoryblokComponent,
-    getStoryblokBridge,
+    useStoryblok,
   } from "./index";
 
   export let accessToken;
@@ -23,7 +23,7 @@
   const storyblokApi = getStoryblokApi();
   const apiExists = !!(storyblokApi && typeof storyblokApi.get === "function");
 
-  let story = getStoryblokBridge(43423, undefined);
+  let story = useStoryblok(43423, undefined);
 
   $: console.log($story);
 </script>
