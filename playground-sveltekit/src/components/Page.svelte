@@ -4,8 +4,10 @@
   export let blok;
 </script>
 
-<div use:storyblokEditable={blok} class="px-6">
-  {#each blok.body as blok}
-    <StoryblokComponent {blok} />
-  {/each}
-</div>
+{#key blok}
+  <div use:storyblokEditable={blok} class="px-6">
+    {#each blok.body as blok}
+      <StoryblokComponent {blok} />
+    {/each}
+  </div>
+{/key}
