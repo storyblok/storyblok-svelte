@@ -3,9 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "workspaces": [
-    "./lib",
-    "./playground",
-    "./playground-sveltekit"
+    "./lib"
   ],
   "types": "./dist/types.index.d.ts",
   "scripts": {
