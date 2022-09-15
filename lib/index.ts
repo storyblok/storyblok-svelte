@@ -78,7 +78,9 @@ storyblokInit({
   return component;
 };
 
-export const useStoryblok = <T extends StoryblokComponentType<string> = any>(
+export const subscribeStoryblokBridge = <
+  T extends StoryblokComponentType<string> = any
+>(
   id: number,
   initialValue: StoryData<T>,
   options: StoryblokBridgeConfigV2

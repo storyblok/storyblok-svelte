@@ -4,7 +4,7 @@
     apiPlugin,
     getStoryblokApi,
     StoryblokComponent,
-    useStoryblok,
+    subscribeStoryblokBridge,
   } from "./index";
 
   export let accessToken;
