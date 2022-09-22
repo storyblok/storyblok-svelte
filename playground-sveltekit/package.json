@@ -2,14 +2,16 @@
   "name": "@storyblok/playground-sveltekit",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build"
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@storyblok/svelte": "^0.0.1",
-    "@sveltejs/adapter-auto": "1.0.0-next.74",
-    "@sveltejs/kit": "1.0.0-next.491",
-    "svelte": "^3.50.1"
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "svelte": "^3.50.1",
+    "vite-plugin-mkcert": "^1.9.0"
   },
   "type": "module"
 }
