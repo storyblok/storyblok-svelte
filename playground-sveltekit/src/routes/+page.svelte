@@ -5,7 +5,9 @@
   export let data;
 
   onMount(() => {
-    useStoryblokBridge(data.story.id, (newStory) => (data.story = newStory));
+    if (data.story) {
+      useStoryblokBridge(data.story.id, (newStory) => (data.story = newStory));
+    }
   });
 </script>
 
