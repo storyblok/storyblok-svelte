@@ -23,7 +23,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
-    "@rollup/plugin-typescript": "^8.4.0",
+    "@rollup/plugin-typescript": "^9.0.1",
     "@tsconfig/svelte": "^3.0.0",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
@@ -32,13 +32,13 @@
     "lint-staged": "^13.0.3",
     "patch-package": "^6.4.7",
     "prettier": "^2.7.1",
-    "prettier-plugin-svelte": "^2.7.0",
+    "prettier-plugin-svelte": "^2.8.0",
     "svelte-check": "^2.9.2",
     "svelte-preprocess": "^4.10.7",
     "tslib": "^2.0.0",
-    "typescript": "^4.8.3",
-    "@typescript-eslint/eslint-plugin": "^5.40.0",
-    "@typescript-eslint/parser": "^5.38.0"
+    "typescript": "^4.8.4",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1"
   },
   "lint-staged": {
     "*.{svelte,js,css,ts}": [
