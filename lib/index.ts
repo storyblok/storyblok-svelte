@@ -49,14 +49,19 @@ export const useStoryblokApi = (): StoryblokClient => {
 export { useStoryblokApi as getStoryblokApi };
 
 let componentsMap: SbSvelteComponentsMap = null;
+let callbackComponents;
 
 export const storyblokInit = (options: SbSvelteSDKOptions) => {
   const { storyblokApi } = sbInit(options);
   storyblokApiInstance = storyblokApi;
   componentsMap = options.components || {};
+  callbackComponents = options.callbackComponents;
 };
 
 export const getComponent = (componentName: string) => {
+  //console.log(componentName, componentsMap)
+
+  componentsMap = callbackComponents();
   const component = componentsMap[componentName];
 
   if (!component) {
