@@ -48,21 +48,20 @@ export const useStoryblokApi = (): StoryblokClient => {
 
 export { useStoryblokApi as getStoryblokApi };
 
-let componentsMap: SbSvelteComponentsMap = null;
-let callbackComponents;
+let componentsMap: SbSvelteComponentsMap | CallableFunction = null;
 
 export const storyblokInit = (options: SbSvelteSDKOptions) => {
   const { storyblokApi } = sbInit(options);
   storyblokApiInstance = storyblokApi;
   componentsMap = options.components || {};
-  callbackComponents = options.callbackComponents;
 };
 
 export const getComponent = (componentName: string) => {
-  //console.log(componentName, componentsMap)
-
-  componentsMap = callbackComponents();
-  const component = componentsMap[componentName];
+  let component = null;
+  component =
+    typeof componentsMap === "function"
+      ? componentsMap()[componentName]
+      : componentsMap[componentName];
 
   if (!component) {
     console.error(`You didn't load the ${componentName} component. Please load it in storyblokInit. For example:

@@ -17,7 +17,15 @@ export async function load() {
   storyblokInit({
     accessToken: "OurklwV5XsDJTIE1NJaD2wtt",
     use: [apiPlugin],
-    callbackComponents: callbackComponents,
+    components: callbackComponents,
+    /*
+    components: {
+      feature: Feature,
+      grid: Grid,
+      page: Page,
+      teaser: Teaser,
+    }
+    */
   });
   let storyblokApi = await useStoryblokApi();
 
