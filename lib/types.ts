@@ -6,7 +6,7 @@ export interface SbSvelteComponentsMap {
 }
 
 export interface SbSvelteSDKOptions extends SbSDKOptions {
-  components?: SbSvelteComponentsMap;
+  components?: SbSvelteComponentsMap | CallableFunction;
 }
 
 export type {
