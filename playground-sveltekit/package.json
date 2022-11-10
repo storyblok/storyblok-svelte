@@ -10,7 +10,7 @@
     "@storyblok/svelte": "^0.0.1",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.52.0",
+    "svelte": "^3.53.0",
     "vite-plugin-mkcert": "^1.10.1"
   },
   "type": "module"
