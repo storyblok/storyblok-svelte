@@ -58,10 +58,14 @@ export const storyblokInit = (options: SbSvelteSDKOptions) => {
 
 export const getComponent = (componentName: string) => {
   let component = null;
-  component =
-    typeof componentsMap === "function"
-      ? componentsMap()[componentName]
-      : componentsMap[componentName];
+  try {
+    component =
+      typeof componentsMap === "function"
+        ? componentsMap()[componentName]
+        : componentsMap[componentName];
+  } catch (error) {
+    return null;
+  }
 
   if (!component) {
     console.error(`You didn't load the ${componentName} component. Please load it in storyblokInit. For example:
