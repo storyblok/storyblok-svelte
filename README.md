@@ -32,17 +32,13 @@
   </a>
 </p>
 
-## 🔎 TL; DR
+## 🚀 Usage
 
 `@storyblok/svelte` helps you connect your Svelte project to Storyblok by:
 
 - Providing the `getStoryblokApi` function to interact with the Storyblok APIs, using the [storyblok-js-client](https://github.com/storyblok/storyblok-js-client)
 - Enabling real time editing through the [Storyblok Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
 - Providing the `StoryblokComponent` which allows you to connect your components to the Storyblok Visual Editor
-
-## 🚀 Usage
-
-> If you are first-time user of the Storyblok, read the [Getting Started](https://www.storyblok.com/tp/add-a-headless-cms-to-svelte-in-5-minutes?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte) guide to get a project ready in less than 5 minutes.
 
 ### Installation
 
@@ -63,18 +59,33 @@ import { storyblokInit, apiPlugin } from "@storyblok/svelte";
 storyblokInit({
   accessToken: "<your-token>",
   // bridge: false,
-  // apiOptions: {  },
   use: [apiPlugin],
+  
   components: {
     teaser: Teaser,
   },
+    // if you are using a space located in US region
+    // you have to use apiOptions.region:
+    /*
+    apiOptions: {
+      region: "us" // region code here
+    }
+    */
 });
 ```
 
-> Add all your components to the components object in the storyblokInit function. You can load all of them at the same time by adding them to the list.
+Add all your components to the components object in the storyblokInit function. You can load all of them at the same time by adding them to the list.
 
 
 ## ℹ️ More Resources
+
+Please follow the step by step instructions available in [Ultimate Tutorial Series](https://www.storyblok.com/tp/the-storyblok-sveltekit-ultimate-tutorial). You can find all the different parts on this overview page and take it from here.
+The parts are:
+
+- Part 1: [Add a headless CMS to SvelteKit in 5 minutes](https://www.storyblok.com/tp/add-a-headless-cms-to-svelte-in-5-minutes) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-1-sveltekit-ut)
+- Part 2: [Render Storyblok Stories Dynamically in SvelteKit](https://www.storyblok.com/tp/render-storyblok-stories-dynamically-in-sveltekit) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-2-sveltekit-ut)
+- Part 3: [Create Dynamic Menus in Storyblok and SvelteKit](https://www.storyblok.com/tp/create-dynamic-menus-in-storyblok-and-sveltekit) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-3-sveltekit-ut)
+- Part 4: [Create Custom Components in Storyblok and SvelteKit](https://www.storyblok.com/tp/create-custom-components-in-storyblok-and-sveltekit) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-4-sveltekit-ut)
 
 ### Support
 
