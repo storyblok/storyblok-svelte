@@ -32,13 +32,13 @@
   </a>
 </p>
 
-<!-- ## 🔎 TL; DR
+## 🔎 TL; DR
 
 `@storyblok/svelte` helps you connect your Svelte project to Storyblok by:
 
 - Providing the `getStoryblokApi` function to interact with the Storyblok APIs, using the [storyblok-js-client](https://github.com/storyblok/storyblok-js-client)
 - Enabling real time editing through the [Storyblok Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
-- Providing the `StoryblokComponent` which allows you to connect your components to the Storyblok Visual Editor -->
+- Providing the `StoryblokComponent` which allows you to connect your components to the Storyblok Visual Editor
 
 ## 🚀 Usage
 
@@ -50,10 +50,11 @@ Install `@storyblok/svelte`
 
 ```bash
 npm install @storyblok/svelte
-# yarn add @storyblok/svelte
 ```
 
-Initialize the library in your application (usually in `main.js`) by adding the `apiPlugin` and the [access token](https://www.storyblok.com/docs/api/content-delivery/v2?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte) of your Storyblok space:
+Please note that you have to use npm - unfortunately we are currently not supporting yarn or pnpm for this SDK. 
+
+Initialize the library in your application by adding the `apiPlugin` and the [access token](https://www.storyblok.com/docs/api/content-delivery/v2?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte) of your Storyblok space:
 
 ```js
 import App from "./App.svelte";
@@ -72,220 +73,6 @@ storyblokInit({
 
 > Add all your components to the components object in the storyblokInit function. You can load all of them at the same time by adding them to the list.
 
-Now, all features are enabled for you: the _Api Client_ for interacting with [Storyblok CDN API](https://www.storyblok.com/docs/api/content-delivery/v2?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte), and _Storyblok Bridge_ for [real-time visual editing experience](https://www.storyblok.com/docs/guide/essentials/visual-editor?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
-
-> You can enable/disable some of these features if you don't need them, so you save some KB. Please read the "Features and API" section
-
-### From a CDN
-
-Install the file from the CDN and access the methods via `window.storyblokSvelte`:
-
-```html
-<script src="https://unpkg.com/@storyblok/svelte"></script>
-```
-
-## Getting started
-
-### 1. Fetching Content
-
-Use the `getStoryblokApi()` gets your stories from the Storyblok CDN API:
-
-```html
-<script>
-  import { onMount } from "svelte";
-  import { getStoryblokApi } from "@storyblok/svelte";
-
-  onMount(async () => {
-    const storyblokApi = getStoryblokApi();
-    const { data } = await storyblokApi.get("cdn/stories/home", {
-      version: "draft",
-    });
-  });
-</script>
-```
-
-> Note: you can skip using `storyblokApi` if you prefer your own method or function to fetch your data.
-
-### 2. Listen to Storyblok Visual Editor events
-
-Use `useStoryBridge` to get the updated story every time a change event is triggered from the Visual Editor. You need to pass the story id as first param, and a callback function as second param to update the new story:
-
-```html
-<script>
-  import { onMount } from "svelte";
-  import { getStoryblokApi, useStoryblokBridge } from "@storyblok/svelte";
-
-  let story = null;
-
-  onMount(async () => {
-    const storyblokApi = getStoryblokApi();
-    const { data } = await storyblokApi.get("cdn/stories/home", {
-      version: "draft",
-    });
-    story = data.story;
-    useStoryblokBridge(story.id, (newStory) => (story = newStory));
-  });
-</script>
-```
-
-You can pass [Bridge options](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte) as a third parameter as well:
-
-```js
-useStoryblokBridge(story.id, (newStory) => (story = newStory), {
-  resolveRelations: ["Article.author"],
-});
-```
-
-### 3. Link your components to Storyblok Visual Editor
-
-In order to link the storyblok components, you have to
-
-- Load them in components when calling `storyblokInit`
-
-- Use the `storyblokEditable` action on the root element of each component
-
-```html
-<div use:storyblokEditable={blok} / >
-```
-
-- Use the `StoryblokComponent` to load them by passing the blok property
-
-```html
-<StoryblokComponent {blok} />
-```
-
-> The `blok` is the actual blok data coming from [Storblok's Content Delivery API](https://www.storyblok.com/docs/api/content-delivery/v2?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
-
-### Features and API
-
-You can **choose the features to use** when you initialize the plugin. In that way, you can improve Web Performance by optimizing your page load and save some bytes.
-
-#### Storyblok API
-
-You can use an `apiOptions` object. This is passed down to the [storyblok-js-client config object](https://github.com/storyblok/storyblok-js-client#class-storyblok):
-
-```js
-storyblokInit({
-  accessToken: "<your-token>",
-  apiOptions: {
-    //storyblok-js-client config object
-    cache: { type: "memory" },
-  },
-  use: [apiPlugin],
-});
-```
-
-If you prefer to use your own fetch method, just remove the `apiPlugin` and `storyblok-js-client` won't be added to your application. You can find out more about our [Content Delivery API](https://www.storyblok.com/docs/api/content-delivery?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte) in the documentation.
-
-#### Storyblok Bridge
-
-You can conditionally load it by using the `bridge` option. Very useful if you want to disable it in production:
-
-```js
-storyblokInit({
-  bridge: process.env.NODE_ENV !== "production",
-});
-```
-
-Keep in mind you have still access to the raw `window.StoryblokBridge`:
-
-```js
-const sbBridge = new window.StoryblokBridge(options);
-
-sbBridge.on(["input", "published", "change"], (event) => {
-  // ...
-});
-```
-
-For background information on the [Storyblok JS Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte), please check out documentation.
-
-### Rendering Rich Text
-
-You can easily render rich text by using the `renderRichText`function that comes with `@storyblok/svelte`and Sveltes `{@html htmlstring}`directive.
-
-```html
-<script>
-  import { renderRichText } from "@storyblok/svelte";
-
-  export let blok;
-  $: articleHTML = renderRichText(blok.article);
-</script>
-
-<div>{@html articleHTML}</div>
-```
-
-You can set a **custom Schema and component resolver globally** at init time by using the `richText` init option:
-
-```js
-import { RichTextSchema, storyblokInit } from "@storyblok/svelte";
-import cloneDeep from "clone-deep";
-
-const mySchema = cloneDeep(RichTextSchema); // you can make a copy of the default RichTextSchema
-// ... and edit the nodes and marks, or add your own.
-// Check the base RichTextSchema source here https://github.com/storyblok/storyblok-js-client/blob/master/source/schema.js
-
-storyblokInit({
-  accessToken: "<your-token>",
-  richText: {
-    schema: mySchema,
-    resolver: (component, blok) => {
-      switch (component) {
-        case "my-custom-component":
-          return `<div class="my-component-class">${blok.text}</div>`;
-        default:
-          return "Resolver not defined";
-      }
-    },
-  },
-});
-```
-
-You can also set a **custom Schema and component resolver only once** by passing the options as the second parameter to `renderRichText` function:
-
-```js
-import { renderRichText } from "@storyblok/svelte";
-
-renderRichText(blok.richTextField, {
-  schema: mySchema,
-  resolver: (component, blok) => {
-    switch (component) {
-      case "my-custom-component":
-        return `<div class="my-component-class">${blok.text}</div>`;
-        break;
-      default:
-        return `Component ${component} not found`;
-    }
-  },
-});
-```
-
-### Compatibility
-
-This plugin is for Svelte. Thus, it supports the [same browsers as Svelte 3](https://github.com/sveltejs/svelte/issues/558). In short: all modern browsers and IE10+.
-
-## Troubleshooting
-
-### Working with a Component Library
-
-When working with a component library, create an alias pointing '@storyblok/svelte' to './node_modules/@storyblok/svelte'. This will ensure the imported module will use the local version of storyblok. In your `svelte.config.js`, include:
-
-```js
-kit: {
-		alias: {
-			'@storyblok/svelte': './node_modules/@storyblok/svelte'
-		},
-
-```
-
-Any module importing @storyblok/svelte will now get it from the aliased location. For more information and alternatives to this solution, please see [npm link, peerDependencies and webpack](https://penx.medium.com/managing-dependencies-in-a-node-package-so-that-they-are-compatible-with-npm-link-61befa5aaca7).
-
-Another option might also be using npm / yarn workspaces.
-
-## 🔗 Related Links
-
-- **[Add a headless CMS to Svelte in 5 minutes](https://www.storyblok.com/tp/add-a-headless-cms-to-svelte-in-5-minutes?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)**: Quick-start guide on getting up and running with Storyblok and Vue.
-- **[Storyblok CLI](https://github.com/storyblok/storyblok)**: A simple CLI for scaffolding Storyblok projects and fieldtypes.
-- [Svelte Documentation](https://svelte.dev/docs)
 
 ## ℹ️ More Resources
 
