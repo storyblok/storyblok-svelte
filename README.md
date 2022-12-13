@@ -48,7 +48,7 @@ Install `@storyblok/svelte`
 npm install @storyblok/svelte
 ```
 
-Please note that you have to use npm - unfortunately we are currently not supporting yarn or pnpm for this SDK. 
+Please note that you have to use npm - unfortunately we are currently not supporting yarn or pnpm for this SDK.
 
 Initialize the library in your application by adding the `apiPlugin` and the [access token](https://www.storyblok.com/docs/api/content-delivery/v2?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte) of your Storyblok space:
 
@@ -60,13 +60,13 @@ storyblokInit({
   accessToken: "<your-token>",
   // bridge: false,
   use: [apiPlugin],
-  
+
   components: {
     teaser: Teaser,
   },
-    // if you are using a space located in US region
-    // you have to use apiOptions.region:
-    /*
+  // if you are using a space located in US region
+  // you have to use apiOptions.region:
+  /*
     apiOptions: {
       region: "us" // region code here
     }
@@ -76,6 +76,7 @@ storyblokInit({
 
 Add all your components to the components object in the storyblokInit function. You can load all of them at the same time by adding them to the list.
 
+⚠️ This SDK uses the Fetch API under the hood. If your environment doesn't support it, you need to install a polyfill like [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch). More info on [storyblok-js-client docs](https://github.com/storyblok/storyblok-js-client#fetch-use-polyfill-if-needed---version-5).
 
 ## ℹ️ More Resources
 
