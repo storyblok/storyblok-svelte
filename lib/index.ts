@@ -6,7 +6,8 @@ export {
   useStoryblokBridge,
   apiPlugin,
   renderRichText,
-  // RichTextSchema, // ISbSchema ?
+  RichTextSchema,
+  RichTextResolver,
 } from "@storyblok/js";
 
 import type {
