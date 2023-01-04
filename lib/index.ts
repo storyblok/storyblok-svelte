@@ -7,7 +7,6 @@ export {
   apiPlugin,
   renderRichText,
   RichTextSchema,
-  RichTextResolver,
 } from "@storyblok/js";
 
 import type {
