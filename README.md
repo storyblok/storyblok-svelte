@@ -87,6 +87,7 @@ The parts are:
 - Part 2: [Render Storyblok Stories Dynamically in SvelteKit](https://www.storyblok.com/tp/render-storyblok-stories-dynamically-in-sveltekit) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-2-sveltekit-ut)
 - Part 3: [Create Dynamic Menus in Storyblok and SvelteKit](https://www.storyblok.com/tp/create-dynamic-menus-in-storyblok-and-sveltekit) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-3-sveltekit-ut)
 - Part 4: [Create Custom Components in Storyblok and SvelteKit](https://www.storyblok.com/tp/create-custom-components-in-storyblok-and-sveltekit) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-4-sveltekit-ut)
+- Part 5: [Create and Render Blog Articles in Storyblok and SvelteKit](https://www.storyblok.com/tp/create-and-render-blog-articles-in-storyblok-and-sveltekit) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-5-sveltekit-ut)
 
 ### Support
 
