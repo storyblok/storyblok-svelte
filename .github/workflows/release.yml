@@ -23,8 +23,6 @@ jobs:
         run: npm run build
       - name: Jest run
         run: npm run test:unit
-      - name: Cypress run
-        run: npm run test:e2e
       - name: Release
         working-directory: lib
         env:

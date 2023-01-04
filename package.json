@@ -17,7 +17,6 @@
     "test:unit": "npm run test:unit --workspace=lib",
     "test:e2e": "npm run test:e2e --workspace=lib",
     "prepare": "husky install",
-    "postinstall": "patch-package",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
@@ -30,7 +29,6 @@
     "eslint-plugin-svelte3": "^4.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
-    "patch-package": "^6.5.1",
     "prettier": "^2.8.1",
     "prettier-plugin-svelte": "^2.9.0",
     "svelte-check": "^3.0.1",
