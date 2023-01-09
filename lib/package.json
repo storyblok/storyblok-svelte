@@ -1,6 +1,7 @@
 {
   "name": "@storyblok/svelte",
   "version": "0.0.1",
+  "type": "module",
   "description": "Storyblok SDK to connect Storyblok with Svelte",
   "main": "./dist/storyblok-svelte.js",
   "module": "./dist/storyblok-svelte.mjs",
@@ -26,7 +27,7 @@
     "prepublishOnly": "npm run build && cp ../README.md ./"
   },
   "dependencies": {
-    "@storyblok/js": "^1.8.6"
+    "@storyblok/js": "^2.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -36,7 +37,7 @@
     "jest": "^29.2.1",
     "svelte-preprocess": "^5.0.0",
     "typescript": "^4.9.4",
-    "vite": "^3.1.8"
+    "vite": "^4.0.0"
   },
   "eslintConfig": {
     "env": {

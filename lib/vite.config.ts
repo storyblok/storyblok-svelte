@@ -14,9 +14,6 @@ export default defineConfig(() => {
         name: "storyblokSvelte",
         fileName: (format) => (format === "es" ? `${name}.mjs` : `${name}.js`),
       },
-      rollupOptions: {
-        external: ["axios"], // FIX: temporary till we remove axios dependency in storyblok-js-client
-      },
     },
   };
 });

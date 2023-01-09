@@ -9,27 +9,27 @@ export interface SbSvelteSDKOptions extends SbSDKOptions {
   components?: SbSvelteComponentsMap | CallableFunction;
 }
 
+export { apiPlugin } from "@storyblok/js";
+
 export type {
-  AlternateObject,
-  Richtext,
-  RichtextInstance,
+  ISbAlternateObject,
+  ISbRichtext,
+  RichTextResolver,
   SbBlokData,
   SbBlokKeyDataTypes,
   SbSDKOptions,
-  Stories,
-  StoriesParams,
-  Story,
-  StoryData,
-  StoryParams,
+  ISbStories,
+  ISbStoriesParams,
+  ISbStory,
+  ISbStoryData,
+  ISbStoryParams,
   StoryblokBridgeConfigV2,
   StoryblokBridgeV2,
-  StoryblokCache,
-  StoryblokCacheProvider,
+  ISbCache,
   StoryblokClient,
   StoryblokComponentType,
-  StoryblokConfig,
-  StoryblokManagmentApiResult,
-  StoryblokResult,
-  apiPlugin,
+  ISbConfig,
+  ISbManagmentApiResult,
+  ISbResult,
   useStoryblokBridge,
 } from "@storyblok/js";
