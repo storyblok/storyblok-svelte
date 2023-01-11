@@ -35,7 +35,7 @@
     "svelte-preprocess": "^5.0.0",
     "tslib": "^2.0.0",
     "typescript": "^4.9.4",
-    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1"
   },
   "lint-staged": {
