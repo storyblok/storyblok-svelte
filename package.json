@@ -24,6 +24,8 @@
     "@commitlint/config-conventional": "^17.4.2",
     "@rollup/plugin-typescript": "^11.0.0",
     "@tsconfig/svelte": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-svelte3": "^4.0.0",
@@ -34,9 +36,7 @@
     "svelte-check": "^3.0.3",
     "svelte-preprocess": "^5.0.1",
     "tslib": "^2.5.0",
-    "typescript": "^4.9.4",
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "@typescript-eslint/parser": "^5.49.0"
+    "typescript": "^4.9.4"
   },
   "lint-staged": {
     "*.{svelte,js,css,ts}": [
@@ -88,5 +88,8 @@
     "tabWidth": 2,
     "semi": true,
     "singleQuote": false
+  },
+  "dependencies": {
+    "vite": "^4.0.4"
   }
 }
