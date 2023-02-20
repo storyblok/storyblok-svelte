@@ -20,7 +20,7 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.4.3",
+    "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "@rollup/plugin-typescript": "^11.0.0",
     "@tsconfig/svelte": "^3.0.0",
