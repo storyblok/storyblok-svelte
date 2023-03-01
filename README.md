@@ -33,9 +33,9 @@
 
 `@storyblok/svelte` helps you connect your Svelte project to Storyblok by:
 
-- Providing the `getStoryblokApi` function to interact with the Storyblok APIs, using the [storyblok-js-client](https://github.com/storyblok/storyblok-js-client)
-- Enabling real-time editing through the [Storyblok Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
-- Providing the `StoryblokComponent`, which allows you to connect your components to the Storyblok Visual Editor
+- Providing the `getStoryblokApi` function to interact with the Storyblok APIs, using the [storyblok-js-client](https://github.com/storyblok/storyblok-js-client);
+- Enabling real-time editing through the [Storyblok Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte);
+- Providing the `StoryblokComponent`, which allows you to connect your components to the [Storyblok Visual Editor](https://www.storyblok.com/docs/editor-guides/visual-editor?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
 
 ### Installation
 
@@ -45,7 +45,7 @@ Install `@storyblok/svelte`
 npm install @storyblok/svelte
 ```
 
-Please note that you have to use `npm` - unfortunately, we are currently not supporting yarn or `pnpm` for this SDK.
+Please note that you have to use `npm` - unfortunately, we are currently not supporting `yarn` or `pnpm` for this SDK.
 
 Initialize the library in your application by adding the `apiPlugin` and the [access token](https://www.storyblok.com/docs/api/content-delivery/v2?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte) of your Storyblok space:
 
@@ -146,7 +146,7 @@ To link the Storyblok components, you have to
 
 ### Features and API
 
-You can **choose the features to use** when you initialize the plugin. In that way, you can improve Web Performance by optimizing your page load and saving some bytes.
+You can **choose the features to use** when you initialize the plugin. In that way, you can improve web performance by optimizing your page load and saving some bytes.
 
 #### Storyblok API
 
@@ -188,7 +188,7 @@ For background information on the [Storyblok JS Bridge](https://www.storyblok.co
 
 ### Rendering Rich Text
 
-You can easily render rich text by using the `renderRichText`function that comes with `@storyblok/svelte`and Sveltes `{@html htmlstring}`directive.
+You can easily render rich text by using the `renderRichText` function that comes with `@storyblok/svelte` and Svelte `{@html htmlstring}` directive.
 
 ```html
 <script>
@@ -346,4 +346,4 @@ The parts are:
 ### Contributing
 
 Please see our [contributing guidelines](https://github.com/storyblok/.github/blob/master/contributing.md) and our [code of conduct](https://www.storyblok.com/trust-center#code-of-conduct?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
-This project uses [semantic-release](https://semantic-release.gitbook.io/semantic-release/) for generate new versions by using commit messages and we use the [Angular [Convention](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#) to name the commits. Check [this question](https://semantic-release.gitbook.io/semantic-release/support/faq#how-can-i-change-the-type-of-commits-that-trigger-a-release) about it in semantic-release FAQ.
+This project uses [semantic-release](https://semantic-release.gitbook.io/semantic-release/) for generating new versions by using commit messages and we use the [Angular Convention](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#) to name the commits. Check [this question](https://semantic-release.gitbook.io/semantic-release/support/faq#how-can-i-change-the-type-of-commits-that-trigger-a-release) about it in semantic-release FAQ.
