@@ -79,7 +79,7 @@ List all your components to the components object in the storyblokInit function.
 
 ### 1. Fetching Content
 
-Use the `getStoryblokApi()` gets your stories from the Storyblok CDN API:
+Use the `getStoryblokApi`()` to get your stories from the Storyblok CDN API:
 
 ```html
 <script>
@@ -98,7 +98,7 @@ Use the `getStoryblokApi()` gets your stories from the Storyblok CDN API:
 
 ### 2. Listen to Storyblok Visual Editor events
 
-Use `useStoryBridge` to get the updated story every time a change event is triggered from the Visual Editor. You need to pass the story id as first param, and a callback function as second param to update the new story:
+Use `useStoryBridge` to get the updated story every time a change event is triggered from the Visual Editor. You need to pass the story id as the first param, and a callback function as the second param to update the new story:
 
 ```html
 <script>
@@ -126,7 +126,7 @@ useStoryblokBridge(story.id, (newStory) => (story = newStory), {
 
 ### 3. Link your components to Storyblok Visual Editor
 
-In order to link the storyblok components, you have to
+To link the Storyblok components, you have to
 
 - Load them in components when calling `storyblokInit`
 
@@ -136,7 +136,7 @@ In order to link the storyblok components, you have to
 <div use:storyblokEditable={blok} / >
 ```
 
-- Use the `StoryblokComponent` to load them by passing the blok property
+- Use the `StoryblokComponent` to load them by passing the `blok` property
 
 ```html
 <StoryblokComponent {blok} />
@@ -146,7 +146,7 @@ In order to link the storyblok components, you have to
 
 ### Features and API
 
-You can **choose the features to use** when you initialize the plugin. In that way, you can improve Web Performance by optimizing your page load and save some bytes.
+You can **choose the features to use** when you initialize the plugin. In that way, you can improve Web Performance by optimizing your page load and saving some bytes.
 
 #### Storyblok API
 
@@ -184,7 +184,7 @@ sbBridge.on(["input", "published", "change"], (event) => {
 });
 ```
 
-For background information on the [Storyblok JS Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte), please check out documentation.
+For background information on the [Storyblok JS Bridge](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte), please check out the documentation.
 
 ### Rendering Rich Text
 
@@ -200,8 +200,8 @@ You can easily render rich text by using the `renderRichText`function that comes
 <div class="prose">{@html articleHTML}</div>
 ```
 
-If you are allowing to the content editors to add Blok (components like teaser, hero etc) into the riche text editor, you can also implement a specific logic for rendering correctly the components added to the rich text editor.
-To achieve this, you have to obtaing the schema definition from the RichTextSchema via cloning object. For cloning schema you can use the clone-deep library for example:
+If you are allowing the content editors to add Blok (components like teaser, hero etc) into the rich text editor, you can also implement a specific logic for rendering correctly the components added to the rich text editor.
+To achieve this, you have to obtain the schema definition from the RichTextSchema via cloning object. For cloning schema you can use the clone-deep library for example:
 
 ```
 npm i clone-deep
@@ -262,9 +262,9 @@ You can also set a **custom Schema and component resolver only once** by passing
 
 ### Enabling SSL
 
-For security reason the Storyblok UI loads and embeds the frontend project that you are building with Svelte, via HTTPS protocol into Storyblok Visual Editor.
+For security reasons the Storyblok UI loads and embeds the frontend project that you are building with Svelte, via HTTPS protocol into Storyblok Visual Editor.
 
-To enable the HTTPS protocol when you run `npn run dev`, you can install the `basicSsl` Vite plugin.
+To enable the HTTPS protocol when you run `npm run dev`, you can install the `basicSsl` Vite plugin.
 
 ```
 npm i @vitejs/plugin-basic-ssl
@@ -290,7 +290,7 @@ This plugin is for Svelte. Thus, it supports the [same browsers as Svelte 3](htt
 
 ### Working with a Component Library
 
-When working with a component library, create an alias pointing '@storyblok/svelte' to './node_modules/@storyblok/svelte'. This will ensure the imported module will use the local version of storyblok. In your `vite.config.js`, include:
+When working with a component library, create an alias pointing '@storyblok/svelte' to './node_modules/@storyblok/svelte'. This will ensure the imported module will use the local version of Storyblok SDK. In your `vite.config.js`, include:
 
 ```js
 import { sveltekit } from "@sveltejs/kit/vite";
@@ -329,7 +329,7 @@ Another option might also be using npm / yarn workspaces.
 
 ## ℹ️ More Resources
 
-Please follow the step by step instructions available in [Ultimate Tutorial Series](https://www.storyblok.com/tp/the-storyblok-sveltekit-ultimate-tutorial). You can find all the different parts on this overview page and take it from here.
+Please follow the step-by-step instructions available in [Ultimate Tutorial Series](https://www.storyblok.com/tp/the-storyblok-sveltekit-ultimate-tutorial). You can find all the different parts on this overview page and take it from here.
 The parts are:
 
 - Part 1: [Add a headless CMS to SvelteKit in 5 minutes](https://www.storyblok.com/tp/add-a-headless-cms-to-svelte-in-5-minutes) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-1-sveltekit-ut)
@@ -341,9 +341,9 @@ The parts are:
 ### Support
 
 - Bugs or Feature Requests? [Submit an issue](/../../issues/new).
-- Do you have questions about Storyblok or you need help? [Join our Discord Community](https://discord.gg/jKrbAMz).
+- Do you have questions about Storyblok or do you need help? [Join our Discord Community](https://discord.gg/jKrbAMz).
 
 ### Contributing
 
 Please see our [contributing guidelines](https://github.com/storyblok/.github/blob/master/contributing.md) and our [code of conduct](https://www.storyblok.com/trust-center#code-of-conduct?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
-This project uses [semantic-release](https://semantic-release.gitbook.io/semantic-release/) for generate new versions by using commit messages and we use the [Angular Convention](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#) to naming the commits. Check [this question](https://semantic-release.gitbook.io/semantic-release/support/faq#how-can-i-change-the-type-of-commits-that-trigger-a-release) about it in semantic-release FAQ.
+This project uses [semantic-release](https://semantic-release.gitbook.io/semantic-release/) for generate new versions by using commit messages and we use the [Angular [Convention](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#) to name the commits. Check [this question](https://semantic-release.gitbook.io/semantic-release/support/faq#how-can-i-change-the-type-of-commits-that-trigger-a-release) about it in semantic-release FAQ.
