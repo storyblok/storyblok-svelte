@@ -77,5 +77,5 @@ storyblokInit({
   return component;
 };
 
-export * from "../types";
+export * from "./types";
 export { default as StoryblokComponent } from "./StoryblokComponent.svelte";
