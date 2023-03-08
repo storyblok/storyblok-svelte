@@ -6,7 +6,7 @@
     getStoryblokApi,
     useStoryblokBridge,
     StoryblokComponent,
-  } from "./index";
+  } from "./pkg";
 
   export let accessToken;
   export let bridge;
