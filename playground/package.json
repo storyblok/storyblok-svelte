@@ -1,13 +1,15 @@
 {
   "name": "@storyblok/playground",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
-    "demo": "vite"
+    "demo": "vite dev"
   },
   "devDependencies": {
     "@storyblok/svelte": "^0.0.1",
     "@sveltejs/vite-plugin-svelte": "^2.0.3",
     "svelte": "^3.55.1",
-    "vite": "^4.1.4"
+    "vite": "^4.1.4",
+    "@vitejs/plugin-basic-ssl": "^1.0.1"
   }
 }

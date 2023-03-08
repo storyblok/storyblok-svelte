@@ -10,6 +10,7 @@
   "types": "./dist/types.index.d.ts",
   "scripts": {
     "dev": "npm run dev --workspace=lib & npm run demo",
+    "dev-kit": "npm run dev --workspace=lib & npm run demo-sveltekit",
     "demo": "npm run demo --workspace=playground",
     "demo-sveltekit": "npm run dev --workspace=playground-sveltekit",
     "build": "npm run build --workspace=lib",
