@@ -9,7 +9,7 @@
   "devDependencies": {
     "@storyblok/svelte": "^0.0.1",
     "@sveltejs/adapter-auto": "^1.0",
-    "@sveltejs/kit": "^1.11",
+    "@sveltejs/kit": "^1.13",
     "vite": "^4.1.4",
     "svelte": "^3.56.0",
     "vite-plugin-mkcert": "^1.13.3"
