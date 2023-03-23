@@ -11,7 +11,7 @@
     "@sveltejs/adapter-auto": "^1.0",
     "@sveltejs/kit": "^1.11",
     "vite": "^4.1.4",
-    "svelte": "^3.56.0",
+    "svelte": "^3.57.0",
     "vite-plugin-mkcert": "^1.13.3"
   },
   "type": "module"
