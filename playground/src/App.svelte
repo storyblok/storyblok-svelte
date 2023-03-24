@@ -21,7 +21,7 @@
 
 <div>
   {#if story}
-    <StoryblokComponent blok={2} />
+    <StoryblokComponent blok={story.content} />
   {/if}
 </div>
 
