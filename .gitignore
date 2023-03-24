@@ -4,3 +4,4 @@ dist
 dist-v2
 lib/cypress/videos
 .svelte-kit
+lib/README.md
