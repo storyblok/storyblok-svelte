@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   import {
     getStoryblokApi,
@@ -21,7 +21,7 @@
 
 <div>
   {#if story}
-    <StoryblokComponent blok={story.content} />
+    <StoryblokComponent blok={2} />
   {/if}
 </div>
 
