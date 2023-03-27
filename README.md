@@ -29,6 +29,14 @@
   </a>
 </p>
 
+#### Compatibility
+
+| Version to install                                                                                                                      | Support                                              |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| Latest (from v3) `@storyblok/svelte`                                                                                                    | Modern browsers + Node 18+                           |
+| Latest (from v3) `@storyblok/svelte` <br> + Fetch polyfill like [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) | Browsers and Node versions with no Fetch API support |
+| [Version 2](https://github.com/storyblok/@storyblok/svelte/tree/v2.5.0) `@storyblok/svelte@2`                                           | Internet Explorer support                            |
+
 ## 🚀 Usage
 
 `@storyblok/svelte` helps you connect your Svelte project to Storyblok by:
