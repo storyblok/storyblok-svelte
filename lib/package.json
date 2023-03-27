@@ -68,7 +68,14 @@
   "homepage": "https://github.com/storyblok/storyblok-svelte",
   "release": {
     "branches": [
-      "main"
+      {
+        "name": "v2",
+        "range": "2.x",
+        "channel": "v2"
+      },
+      {
+        "name": "main"
+      }
     ]
   },
   "publishConfig": {
