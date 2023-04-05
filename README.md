@@ -69,19 +69,33 @@ storyblokInit({
   components: {
     teaser: Teaser,
   },
-  // if you are using a space located in US region
-  // you have to use apiOptions.region:
-  /*
-    apiOptions: {
-      region: "us" // region code here
-    }
-    */
 });
 ```
 
-The best place to initialize the Stroyblok library is in the `main.ts.` or `main.js` file if you are using `svelte` or in the `load()` function in the `src/routes/+layout.js` file if you are using `SvelteKit`.
+The best place to initialize the Storyblok library is in the `main.ts.` or `main.js` file if you are using `svelte` or in the `load()` function in the `src/routes/+layout.js` file if you are using `SvelteKit`.
 
 List all your components to the components object in the storyblokInit function. You can load all of them by adding them to the list.
+
+#### Region parameter
+
+Possible values:
+
+- `eu` (default): For spaces created in the EU
+- `us`: For spaces created in the US
+- `cn`: For spaces created in China
+
+Full example for a space created in the US:
+
+```js
+  {
+    accessToken: "<your-access-token>",
+    apiOptions: {
+      region: "us"
+    }
+  }
+```
+
+> Note: For spaces created in the United States or China, the `region` parameter **must** be specified.
 
 ## Getting started
 
@@ -334,6 +348,10 @@ Another option might also be using npm / yarn workspaces.
 ## A note about Fetch API
 
 ⚠️ This SDK uses the Fetch API under the hood. If your environment doesn't support it, you need to install a polyfill like [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch). More info on [storyblok-js-client docs](https://github.com/storyblok/storyblok-js-client#fetch-use-polyfill-if-needed---version-5).
+
+## The Storyblok JavaScript SDK Ecosystem
+
+![A visual representation of the Storyblok JavaScript SDK Ecosystem](https://a.storyblok.com/f/88751/2400x1350/be4a4a4180/sdk-ecosystem.png/m/1200x0)
 
 ## ℹ️ More Resources
 
