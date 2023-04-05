@@ -134,7 +134,7 @@ useStoryblokBridge(story.id, (newStory) => (story = newStory), {
 
 ### 3. Link your components to Storyblok Visual Editor
 
-To link the Storyblok components, you have to
+To link the Storyblok components, you have to:
 
 - Load them in components when calling `storyblokInit`
 
