@@ -23,7 +23,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
-    "@rollup/plugin-typescript": "^11.0.0",
+    "@rollup/plugin-typescript": "^11.1.0",
     "@tsconfig/svelte": "^4.0.0",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
