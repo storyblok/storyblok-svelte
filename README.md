@@ -47,10 +47,10 @@
 
 ### Installation
 
-Install `@storyblok/svelte`
+Install `@storyblok/svelte`, and `axios` library:
 
 ```bash
-npm install @storyblok/svelte
+npm install @storyblok/svelte axios
 ```
 
 Please note that you have to use `npm` - unfortunately, we are currently not supporting `yarn` or `pnpm` for this SDK.
