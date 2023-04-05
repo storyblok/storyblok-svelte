@@ -6,7 +6,7 @@
     "demo": "vite dev"
   },
   "devDependencies": {
-    "@storyblok/svelte": "^0.0.1",
+    "@storyblok/svelte": "^1.0.0",
     "@sveltejs/vite-plugin-svelte": "^2.0.3",
     "svelte": "^3.55.1",
     "vite": "^4.1.4",

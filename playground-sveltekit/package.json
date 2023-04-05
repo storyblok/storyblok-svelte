@@ -7,7 +7,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@storyblok/svelte": "^0.0.1",
+    "@storyblok/svelte": "^1.0.0",
     "@sveltejs/adapter-auto": "^2.0.0",
     "@sveltejs/kit": "^1.14.0",
     "svelte": "^3.55.1",
