@@ -37,7 +37,7 @@
     "tslib": "^2.5.0",
     "typescript": "^5.0.4",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
-    "@typescript-eslint/parser": "^5.57.0"
+    "@typescript-eslint/parser": "^5.58.0"
   },
   "lint-staged": {
     "*.{svelte,js,css,ts}": [
