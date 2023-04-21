@@ -18,7 +18,7 @@
     "test:unit": "npm run test:unit --workspace=lib",
     "test:e2e": "npm run test:e2e --workspace=lib",
     "prepare": "husky install",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig lib/tsconfig.json"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.1",
