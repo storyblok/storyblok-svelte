@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@storyblok/js": "^2.2.1",
-    "svelte": "^3.59.1"
+    "svelte": "^3.59.2"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
