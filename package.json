@@ -24,7 +24,7 @@
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
     "@rollup/plugin-typescript": "^11.1.2",
-    "@tsconfig/svelte": "^4.0.0",
+    "@tsconfig/svelte": "^5.0.0",
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-svelte3": "^4.0.0",
