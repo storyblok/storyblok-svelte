@@ -30,7 +30,7 @@
     "svelte": "^3.59.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.6",
+    "@babel/core": "^7.22.8",
     "@sveltejs/package": "^2.1.0",
     "@tsconfig/svelte": "^5.0.0",
     "babel-jest": "^29",
