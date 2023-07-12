@@ -9,7 +9,7 @@
     "@storyblok/svelte": "^1.0.0",
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "svelte": "^3.59.2",
-    "vite": "^4.4.2",
+    "vite": "^4.4.3",
     "@vitejs/plugin-basic-ssl": "^1.0.1"
   }
 }
