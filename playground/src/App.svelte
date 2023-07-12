@@ -20,6 +20,7 @@
 </script>
 
 <div>
+  <h1>Hey</h1>
   {#if story}
     <StoryblokComponent blok={story.content} />
   {/if}
