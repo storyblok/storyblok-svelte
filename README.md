@@ -143,6 +143,7 @@ You can pass [Bridge options](https://www.storyblok.com/docs/Guides/storyblok-la
 ```js
 useStoryblokBridge(story.id, (newStory) => (story = newStory), {
   resolveRelations: ["Article.author"],
+  resolveLinks: "url",
 });
 ```
 
