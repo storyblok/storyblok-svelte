@@ -1,9 +1,8 @@
-<script lang="ts">
+<script>
   import { getComponent } from "./index";
-  import type { SbBlokData } from "@storyblok/js";
 
   let component;
-  export let blok: SbBlokData;
+  export let blok;
 
   if (blok) {
     component = getComponent(blok.component);
