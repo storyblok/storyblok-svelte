@@ -26,7 +26,7 @@
     "@rollup/plugin-typescript": "^11.1.2",
     "@tsconfig/svelte": "^5.0.0",
     "eslint": "^8.46.0",
-    "eslint-config-prettier": "^8.9.0",
+    "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
