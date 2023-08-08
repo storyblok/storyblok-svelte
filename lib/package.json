@@ -29,7 +29,7 @@
     "@storyblok/js": "^2.2.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.9",
+    "@babel/core": "^7.22.10",
     "@sveltejs/package": "^2.2.0",
     "@tsconfig/svelte": "^5.0.0",
     "babel-jest": "^29",
