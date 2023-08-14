@@ -95,7 +95,8 @@ Full example for a space created in the US:
   }
 ```
 
-> Note: For spaces created in the United States or China, the `region` parameter **must** be specified.
+> **Note**
+> For spaces created in the United States or China, the `region` parameter **must** be specified.
 
 ## Getting started
 
@@ -116,7 +117,8 @@ Use the `getStoryblokApi`()` to get your stories from the Storyblok CDN API:
 </script>
 ```
 
-> Note: you can skip using `storyblokApi` if you prefer your own method or function to fetch your data.
+> **Note**
+> You can skip using `storyblokApi` if you prefer your own method or function to fetch your data.
 
 ### 2. Listen to Storyblok Visual Editor events
 
