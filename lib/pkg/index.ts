@@ -63,17 +63,6 @@ export const getComponent = (componentName: string) => {
       ? componentsMap()[componentName]
       : componentsMap[componentName];
 
-  if (!component) {
-    console.error(`You didn't load the ${componentName} component. Please load it in storyblokInit. For example:
-storyblokInit({
-    accessToken: "<your-token>",
-    components: {
-      "teaser": Teaser
-    }
-})
-`);
-  }
-
   return component;
 };
 

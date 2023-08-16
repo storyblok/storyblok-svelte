@@ -1,4 +1,5 @@
 <script>
+  import FallbackComponent from "../FallbackComponent.svelte";
   import { getComponent } from "./index";
 
   let component;
@@ -12,4 +13,8 @@
 </script>
 
 <!-- svelte-ignore missing-declaration -->
-<svelte:component this={component} {blok} {...$$restProps} />
+{#if component}
+  <svelte:component this={component} {blok} {...$$restProps} />
+{:else}
+  <FallbackComponent {blok} />
+{/if}

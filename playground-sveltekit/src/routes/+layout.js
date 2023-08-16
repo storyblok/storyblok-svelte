@@ -17,6 +17,7 @@ export async function load() {
   storyblokInit({
     accessToken: "OurklwV5XsDJTIE1NJaD2wtt",
     use: [apiPlugin],
+    enableFallbackComponent: true,
     components: callbackComponents,
     apiOptions: {
       https: true,
