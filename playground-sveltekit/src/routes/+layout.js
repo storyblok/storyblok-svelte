@@ -18,6 +18,7 @@ export async function load() {
     accessToken: "OurklwV5XsDJTIE1NJaD2wtt",
     use: [apiPlugin],
     enableFallbackComponent: true,
+    customFallbackComponent: null,
     components: callbackComponents,
     apiOptions: {
       https: true,
