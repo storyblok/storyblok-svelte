@@ -8,6 +8,8 @@ export interface SbSvelteComponentsMap {
 
 export interface SbSvelteSDKOptions extends SbSDKOptions {
   components?: SbSvelteComponentsMap | CallableFunction;
+  fallbackComponent?: boolean;
+  customFallbackComponent?: SvelteComponent<any>;
 }
 
 export { apiPlugin } from "@storyblok/js";

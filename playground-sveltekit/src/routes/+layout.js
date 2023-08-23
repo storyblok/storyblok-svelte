@@ -17,12 +17,12 @@ export async function load() {
   storyblokInit({
     accessToken: "OurklwV5XsDJTIE1NJaD2wtt",
     use: [apiPlugin],
-    enableFallbackComponent: true,
-    customFallbackComponent: null,
     components: callbackComponents,
     apiOptions: {
       https: true,
     },
+    fallbackComponent: true,
+    customFallbackComponent: null,
     /*
     components: {
       feature: Feature,

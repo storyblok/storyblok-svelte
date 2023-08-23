@@ -15,6 +15,7 @@ import type {
   StoryblokClient,
   SbBlokData,
 } from "./types";
+import type { SvelteComponent } from "svelte";
 
 export const storyblokEditable = (node: HTMLElement, value: SbBlokData) => {
   const updateDom = (value: SbBlokData) => {
@@ -49,11 +50,15 @@ export const useStoryblokApi = (): StoryblokClient => {
 export { useStoryblokApi as getStoryblokApi };
 
 let componentsMap: SbSvelteComponentsMap | CallableFunction = null;
+let fallbackComponent: boolean = false;
+let customFallbackComponent: SvelteComponent<any> = null;
 
 export const storyblokInit = (options: SbSvelteSDKOptions) => {
   const { storyblokApi } = sbInit(options);
   storyblokApiInstance = storyblokApi;
   componentsMap = options.components || {};
+  fallbackComponent = options.fallbackComponent;
+  customFallbackComponent = options.customFallbackComponent;
 };
 
 export const getComponent = (componentName: string) => {
@@ -64,6 +69,14 @@ export const getComponent = (componentName: string) => {
       : componentsMap[componentName];
 
   return component;
+};
+
+export const getFallbackComponent = () => {
+  return fallbackComponent;
+};
+
+export const getCustomFallbackComponent = () => {
+  return customFallbackComponent;
 };
 
 export * from "./types";
