@@ -35,7 +35,7 @@
     "svelte-check": "^3.5.0",
     "svelte-preprocess": "^5.0.4",
     "tslib": "^2.6.2",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.62.0"
   },
