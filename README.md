@@ -31,11 +31,12 @@
 
 #### Compatibility
 
-| Version to install                                                                                                                      | Support                                              |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| Latest (from v3) `@storyblok/svelte`                                                                                                    | Modern browsers + Node 18+                           |
-| Latest (from v3) `@storyblok/svelte` <br> + Fetch polyfill like [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) | Browsers and Node versions with no Fetch API support |
-| [Version 2](https://github.com/storyblok/@storyblok/svelte/tree/v2.5.0) `@storyblok/svelte@2`                                           | Internet Explorer support                            |
+| Version to install                                                                                                                      | Support                                                    |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| Latest (from v4) `@storyblok/svelte`                                                                                                    | SvelteKit2, Vite 5, storyblok/js v3, Storyblok new regions |
+| Latest (from v3) `@storyblok/svelte`                                                                                                    | Modern browsers + Node 18+                                 |
+| Latest (from v3) `@storyblok/svelte` <br> + Fetch polyfill like [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) | Browsers and Node versions with no Fetch API support       |
+| [Version 2](https://github.com/storyblok/@storyblok/svelte/tree/v2.5.0) `@storyblok/svelte@2`                                           | Internet Explorer support                                  |
 
 ## 🚀 Usage
 
@@ -82,6 +83,8 @@ Possible values:
 
 - `eu` (default): For spaces created in the EU
 - `us`: For spaces created in the US
+- `ap`: For spaces created in Australia
+- `ca`: For spaces created in Canada
 - `cn`: For spaces created in China
 
 Full example for a space created in the US:
