@@ -41,7 +41,7 @@
     "vite": "^5.0.0"
   },
   "peerDependencies": {
-    "svelte": "^4.0.0"
+    "svelte": "^3.0.0 || ^4.0.0"
   },
   "eslintConfig": {
     "env": {
