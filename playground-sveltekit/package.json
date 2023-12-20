@@ -7,14 +7,15 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@storyblok/svelte": "^1.0.0",
-    "@sveltejs/adapter-auto": "^2.1.1",
-    "@sveltejs/kit": "^2.0.3",
+    "@storyblok/svelte": "^3.0.0",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.2",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "svelte": "^4.2.7",
     "svelte-check": "^3.6.2",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3",
-    "vite": "^4.5.1",
+    "vite": "^5.0.0",
     "@vitejs/plugin-basic-ssl": "^1.0.2"
   },
   "type": "module"
