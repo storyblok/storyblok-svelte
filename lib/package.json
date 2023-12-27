@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.23.6",
-    "@sveltejs/package": "^2.2.3",
+    "@sveltejs/package": "^2.2.5",
     "@tsconfig/svelte": "^5.0.2",
     "babel-jest": "^29",
     "eslint-plugin-jest": "^27.6.0",
