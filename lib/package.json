@@ -33,7 +33,7 @@
     "@sveltejs/package": "^2.2.5",
     "@tsconfig/svelte": "^5.0.2",
     "babel-jest": "^29",
-    "eslint-plugin-jest": "^27.6.1",
+    "eslint-plugin-jest": "^27.6.2",
     "jest": "^29.7.0",
     "svelte": "^4.2.7",
     "svelte-preprocess": "^5.1.2",
