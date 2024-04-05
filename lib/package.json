@@ -37,7 +37,7 @@
     "jest": "^29.7.0",
     "svelte": "^4.2.9",
     "svelte-preprocess": "^5.1.2",
-    "typescript": "^5.4.3",
+    "typescript": "^5.4.4",
     "vite": "^5.2.8"
   },
   "peerDependencies": {
