@@ -31,7 +31,7 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
-    "prettier-plugin-svelte": "^3.2.2",
+    "prettier-plugin-svelte": "^3.2.3",
     "svelte-check": "^3.6.9",
     "svelte-preprocess": "^5.1.2",
     "tslib": "^2.6.2",
