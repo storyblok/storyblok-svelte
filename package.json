@@ -30,7 +30,7 @@
     "eslint-plugin-svelte3": "^4.0.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.5",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.0",
     "prettier-plugin-svelte": "^3.2.3",
     "svelte-check": "^3.7.1",
     "svelte-preprocess": "^5.1.4",
