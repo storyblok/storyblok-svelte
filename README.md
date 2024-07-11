@@ -29,7 +29,13 @@
   </a>
 </p>
 
-#### Compatibility
+## Kickstart a new project
+Are you eager to dive into coding? **[Follow these steps to kickstart a new project with Storyblok and Svelte](https://www.storyblok.com/technologies#sveltekit?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)**, and get started in just a few minutes!
+
+## Ultimate Tutorial
+Are you looking for a hands-on, step-by-step tutorial? The **[SvelteKit Ultimate Tutorial](https://www.storyblok.com/tp/the-storyblok-sveltekit-ultimate-tutorial?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)** has you covered! It provides comprehensive instructions on building a complete, multilingual website using Storyblok and SvelteKit from start to finish.
+
+## Compatibility
 
 | Version to install                                                                                                                      | Support                                              |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
@@ -37,7 +43,7 @@
 | Latest (from v3) `@storyblok/svelte` <br> + Fetch polyfill like [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) | Browsers and Node versions with no Fetch API support |
 | [Version 2](https://github.com/storyblok/@storyblok/svelte/tree/v2.5.0) `@storyblok/svelte@2`                                           | Internet Explorer support                            |
 
-## 🚀 Usage
+## Usage
 
 `@storyblok/svelte` helps you connect your Svelte project to Storyblok by:
 
@@ -358,23 +364,20 @@ Another option might also be using npm / yarn workspaces.
 
 ![A visual representation of the Storyblok JavaScript SDK Ecosystem](https://a.storyblok.com/f/88751/2400x1350/be4a4a4180/sdk-ecosystem.png/m/1200x0)
 
-## ℹ️ More Resources
+## Further Resources
 
-Please follow the step-by-step instructions available in [Ultimate Tutorial Series](https://www.storyblok.com/tp/the-storyblok-sveltekit-ultimate-tutorial). You can find all the different parts on this overview page and take it from here.
-The parts are:
+- [Quick Start](https://www.storyblok.com/technologies?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
+- [API Documentation](https://www.storyblok.com/docs/api?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
+- [Developer Tutorials](https://www.storyblok.com/tutorials?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
+- [Developer Guides](https://www.storyblok.com/docs/guide/introduction?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
+- [FAQs](https://www.storyblok.com/faqs?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)
 
-- Part 1: [Add a headless CMS to SvelteKit in 5 minutes](https://www.storyblok.com/tp/add-a-headless-cms-to-svelte-in-5-minutes) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-1-sveltekit-ut)
-- Part 2: [Render Storyblok Stories Dynamically in SvelteKit](https://www.storyblok.com/tp/render-storyblok-stories-dynamically-in-sveltekit) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-2-sveltekit-ut)
-- Part 3: [Create Dynamic Menus in Storyblok and SvelteKit](https://www.storyblok.com/tp/create-dynamic-menus-in-storyblok-and-sveltekit) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-3-sveltekit-ut)
-- Part 4: [Create Custom Components in Storyblok and SvelteKit](https://www.storyblok.com/tp/create-custom-components-in-storyblok-and-sveltekit) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-4-sveltekit-ut)
-- Part 5: [Create and Render Blog Articles in Storyblok and SvelteKit](https://www.storyblok.com/tp/create-and-render-blog-articles-in-storyblok-and-sveltekit) - [Source Code](https://github.com/storyblok/sveltekit-ultimate-tutorial-series/tree/part-5-sveltekit-ut)
-
-### Support
+## Support
 
 - Bugs or Feature Requests? [Submit an issue](/../../issues/new).
 - Do you have questions about Storyblok or do you need help? [Join our Discord Community](https://discord.gg/jKrbAMz).
 
-### Contributing
+## Contributing
 
 Please see our [contributing guidelines](https://github.com/storyblok/.github/blob/master/contributing.md) and our [code of conduct](https://www.storyblok.com/trust-center#code-of-conduct?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
 This project uses [semantic-release](https://semantic-release.gitbook.io/semantic-release/) for generating new versions by using commit messages and we use the [Angular Convention](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#) to name the commits. Check [this question](https://semantic-release.gitbook.io/semantic-release/support/faq#how-can-i-change-the-type-of-commits-that-trigger-a-release) about it in semantic-release FAQ.
