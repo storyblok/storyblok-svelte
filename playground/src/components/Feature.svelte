@@ -1,7 +1,7 @@
 <script>
   import { storyblokEditable } from "@storyblok/svelte";
 
-  export let blok;
+  let { blok } = $props();
 </script>
 
 <div use:storyblokEditable={blok} class="py-2">

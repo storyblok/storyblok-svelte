@@ -5,6 +5,7 @@ import Feature from "./components/Feature.svelte";
 import Grid from "./components/Grid.svelte";
 import Page from "./components/Page.svelte";
 import Teaser from "./components/Teaser.svelte";
+import { mount } from "svelte";
 
 storyblokInit({
   accessToken: "OurklwV5XsDJTIE1NJaD2wtt",
@@ -17,8 +18,8 @@ storyblokInit({
   },
 });
 
-const app = new App({
-  target: document.getElementById("app"),
+const app = mount(App, {
+  target: document.getElementById("app")!,
 });
 
 export default app;

@@ -68,7 +68,7 @@ export const getComponent = (componentName: string) => {
 storyblokInit({
     accessToken: "<your-token>",
     components: {
-      "teaser": Teaser
+      "${componentName.toLowerCase()}": ${componentName}
     }
 })
 `);

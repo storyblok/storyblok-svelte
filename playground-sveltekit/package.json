@@ -1,21 +1,21 @@
 {
   "name": "@storyblok/playground-sveltekit",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@storyblok/svelte": "^1.0.0",
+    "@storyblok/svelte": "^2.0.0",
     "@sveltejs/adapter-auto": "^3.2.4",
-    "@sveltejs/kit": "^2.5.24",
-    "@sveltejs/vite-plugin-svelte": "^3.1.2",
-    "svelte": "^4.2.16",
-    "svelte-check": "^3.8.6",
+    "@sveltejs/kit": "^2.5.27",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
     "tslib": "^2.7.0",
     "typescript": "^5.5.4",
-    "vite": "^5.4.2",
+    "vite": "^5.4.4",
     "@vitejs/plugin-basic-ssl": "^1.0.2"
   },
   "type": "module"

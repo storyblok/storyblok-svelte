@@ -1,6 +1,6 @@
 {
   "name": "@storyblok/svelte",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "description": "Storyblok SDK to connect Storyblok with Svelte",
   "main": "./dist/index.js",
@@ -22,27 +22,27 @@
   "scripts": {
     "dev": "svelte-package -i pkg --watch",
     "build": "svelte-package -i pkg",
-    "test": "npm run test:unit && npm run test:e2e",
+    "test": "npm run test:unit",
     "test:unit": "jest __tests__",
     "prepublishOnly": "npm run build && cp ../README.md ."
   },
   "dependencies": {
-    "@storyblok/js": "^3.1.1"
+    "@storyblok/js": "^3.1.9"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@sveltejs/package": "^2.3.4",
+    "@sveltejs/package": "^2.3.7",
     "@tsconfig/svelte": "^5.0.4",
     "babel-jest": "^29",
     "eslint-plugin-jest": "^28.8.0",
     "jest": "^29.7.0",
-    "svelte": "^4.2.16",
-    "svelte-preprocess": "^5.1.4",
+    "svelte": "^5.0.0",
+    "svelte-preprocess": "^6.0.0",
     "typescript": "^5.5.4",
-    "vite": "^5.4.2"
+    "vite": "^5.4.4"
   },
   "peerDependencies": {
-    "svelte": "^3.0.0 || ^4.0.0"
+    "svelte": "^5.0.0"
   },
   "eslintConfig": {
     "env": {
@@ -67,6 +67,9 @@
     "storyblok"
   ],
   "author": "Josefine Schaefer",
+  "contributors": [
+    "Amar Tupo<amar@practical.at>"
+  ],
   "bugs": {
     "url": "https://github.com/storyblok/storyblok-svelte/issues"
   },

@@ -8,10 +8,12 @@
     StoryblokComponent,
   } from "./pkg";
 
-  export let accessToken;
-  export let bridge;
-  export let components;
-  export let blok;
+  let {
+    accessToken,
+    bridge,
+    components,
+    blok
+  } = $props();
 
   storyblokInit({
     accessToken,

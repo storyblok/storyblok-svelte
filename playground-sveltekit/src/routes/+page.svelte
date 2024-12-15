@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { useStoryblokBridge, StoryblokComponent } from "@storyblok/svelte";
 
-  export let data;
+  let { data = $bindable() } = $props();
 
   onMount(() => {
     if (data.story) {

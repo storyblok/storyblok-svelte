@@ -4,8 +4,8 @@
     StoryblokComponent,
     renderRichText,
   } from "@storyblok/svelte";
-  export let blok;
-  $: resolvedRichText = renderRichText(blok.richText);
+  let { blok } = $props();
+  let resolvedRichText = $derived(renderRichText(blok.richText));
 </script>
 
 {#key blok}
