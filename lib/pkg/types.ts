@@ -2,8 +2,7 @@ import type { SbSDKOptions } from "@storyblok/js";
 import type { SvelteComponent } from "svelte";
 
 export interface SbSvelteComponentsMap {
-  // @ts-ignore
-  [name: string]: typeof SvelteComponent<any>;
+  [name: string]: typeof SvelteComponent;
 }
 
 export interface SbSvelteSDKOptions extends SbSDKOptions {
