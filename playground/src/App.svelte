@@ -6,7 +6,7 @@
     StoryblokComponent,
   } from "@storyblok/svelte";
 
-  let story = null;
+  let story = $state(null);
 
   onMount(async () => {
     const sbApi = getStoryblokApi();

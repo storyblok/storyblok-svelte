@@ -1,7 +1,7 @@
 <script>
   import { storyblokEditable, StoryblokComponent } from "@storyblok/svelte";
 
-  export let blok;
+  let { blok } = $props();
 </script>
 
 <div use:storyblokEditable={blok} class="flex py-8 mb-6">

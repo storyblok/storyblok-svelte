@@ -30,9 +30,11 @@
 </p>
 
 ## Kickstart a new project
+
 Are you eager to dive into coding? **[Follow these steps to kickstart a new project with Storyblok and Svelte](https://www.storyblok.com/technologies#sveltekit?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)**, and get started in just a few minutes!
 
 ## Ultimate Tutorial
+
 Are you looking for a hands-on, step-by-step tutorial? The **[SvelteKit Ultimate Tutorial](https://www.storyblok.com/tp/the-storyblok-sveltekit-ultimate-tutorial?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)** has you covered! It provides comprehensive instructions on building a complete, multilingual website using Storyblok and SvelteKit from start to finish.
 
 ## Compatibility
@@ -226,8 +228,9 @@ You can easily render rich text by using the `renderRichText` function that come
 ```html
 <script>
   import { renderRichText } from "@storyblok/svelte";
+
   export let blok;
-  $: articleHTML = renderRichText(blok.article);
+  articleHTML = renderRichText(blok.article);
 </script>
 
 <div class="prose">{@html articleHTML}</div>
