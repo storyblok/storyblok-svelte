@@ -30,7 +30,7 @@
 </p>
 
 ## Kickstart a new project
-Are you eager to dive into coding? **[Follow these steps to kickstart a new project with Storyblok and Svelte](https://www.storyblok.com/technologies#sveltekit?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)**, and get started in just a few minutes!
+Are you eager to dive into coding? **[Follow these steps to kickstart a new project with Storyblok and Svelte](https://www.storyblok.com/technologies?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte#sveltekit)**, and get started in just a few minutes!
 
 ## Ultimate Tutorial
 Are you looking for a hands-on, step-by-step tutorial? The **[SvelteKit Ultimate Tutorial](https://www.storyblok.com/tp/the-storyblok-sveltekit-ultimate-tutorial?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte)** has you covered! It provides comprehensive instructions on building a complete, multilingual website using Storyblok and SvelteKit from start to finish.
@@ -379,5 +379,5 @@ Another option might also be using npm / yarn workspaces.
 
 ## Contributing
 
-Please see our [contributing guidelines](https://github.com/storyblok/.github/blob/master/contributing.md) and our [code of conduct](https://www.storyblok.com/trust-center#code-of-conduct?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
+Please see our [contributing guidelines](https://github.com/storyblok/.github/blob/master/contributing.md) and our [code of conduct](https://www.storyblok.com/trust-center?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte#code-of-conduct).
 This project uses [semantic-release](https://semantic-release.gitbook.io/semantic-release/) for generating new versions by using commit messages and we use the [Angular Convention](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#) to name the commits. Check [this question](https://semantic-release.gitbook.io/semantic-release/support/faq#how-can-i-change-the-type-of-commits-that-trigger-a-release) about it in semantic-release FAQ.
