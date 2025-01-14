@@ -1,13 +1,19 @@
-<script lang="ts">
-  import { storyblokEditable, StoryblokComponent } from '@storyblok/svelte';
+<script>
+  import {
+    storyblokEditable,
+    StoryblokComponent,
+    renderRichText,
+  } from "@storyblok/svelte";
 
   let { blok } = $props();
+  let resolvedRichText = $derived(renderRichText(blok.richText));
 </script>
 
-<div use:storyblokEditable={blok} class="container">
-  {#each blok.body as item}
-    <div>
-      <StoryblokComponent blok={item} />
-    </div>
-  {/each}
-</div>
+{#key blok}
+  <div use:storyblokEditable={blok} class="px-6">
+    {#each blok.body as bodyBlok}
+      <StoryblokComponent blok={bodyBlok} />
+    {/each}
+    <div class="prose">{@html resolvedRichText}</div>
+  </div>
+{/key}

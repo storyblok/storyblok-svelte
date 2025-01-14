@@ -1,19 +1,16 @@
 <script>
   import { getComponent } from './index';
 
-  /**
-   * @type {any}
-   */
-  let component;
-  // eslint-disable-next-line import/no-mutable-exports
-  export let blok;
+  const { blok, ...rest } = $props();
 
-  if (blok) {
-    component = getComponent(blok.component);
-  }
-  else {
+  if (!blok) {
     console.error('Please provide a \'blok\' property to the StoryblokComponent');
   }
+
+  const component = $state(blok ? getComponent(blok.component) : null);
+  const SvelteComponent = $derived(component);
 </script>
 
-<svelte:component this={component} {blok} {...$$restProps} />
+{#if component}
+  <SvelteComponent {blok} {...rest} />
+{/if}
