@@ -1,5 +1,5 @@
 import type { LayoutLoad } from './$types';
-import { storyblokInit, apiPlugin, useStoryblokApi } from "@storyblok/svelte";
+import { storyblokInit, apiPlugin, getStoryblokApi } from "@storyblok/svelte";
 import Teaser from '$lib/Teaser.svelte';
 import Page from '$lib/Page.svelte';
 import Feature from '$lib/Feature.svelte';
@@ -26,6 +26,6 @@ export const load: LayoutLoad = () => {
   });
 
 	return {
-	  storyblokApi: useStoryblokApi()
+	  storyblokApi: getStoryblokApi(),
 	};
 };

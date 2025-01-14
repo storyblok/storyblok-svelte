@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [dts({ insertTypesEntry: true }), sveltekit()] as Plugin[],
 
   test: {
-    include: ['./src/__tests__/**/*', './src/**/*.spec.ts'],
+    environment: 'jsdom',
+    include: ['./src/tests/**/*', './src/**/*.spec.ts'],
   },
 });

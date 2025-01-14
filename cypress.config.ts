@@ -1,5 +1,5 @@
 import { defineConfig } from 'cypress';
-import { svelte } from '@sveltejs/vite-plugin-svelte'
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 export default defineConfig({
   e2e: {
@@ -12,8 +12,8 @@ export default defineConfig({
       bundler: 'vite',
       viteConfig: () => {
         return {
-          plugins: [svelte()]
-        }
+          plugins: [svelte()],
+        };
       },
     },
   },

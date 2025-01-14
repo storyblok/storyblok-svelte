@@ -73,6 +73,7 @@
     "cypress": "^13.17.0",
     "eslint": "^9.18.0",
     "eslint-plugin-svelte": "^2.36.0",
+    "jsdom": "^26.0.0",
     "publint": "^0.2.0",
     "simple-git-hooks": "^2.11.1",
     "start-server-and-test": "^2.0.10",
@@ -88,7 +89,11 @@
       "@commitlint/config-conventional"
     ],
     "rules": {
-      "body-max-line-length": [2, "always", 200]
+      "body-max-line-length": [
+        2,
+        "always",
+        200
+      ]
     }
   },
   "release": {

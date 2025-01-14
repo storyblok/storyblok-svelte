@@ -3,7 +3,7 @@
   import type { PageData } from './$types';
   import { onMount } from 'svelte';
 
-  let { data }: { data: PageData } = $props();
+  let { data = $bindable() }: { data: PageData } = $props();
   let story = $state(data.story);
   let loaded = $state(false);
 
