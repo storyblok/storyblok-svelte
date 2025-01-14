@@ -1,17 +1,17 @@
 name: 🐞 SDK Bug Report
-description: Report an issue using React Storyblok SDK
+description: Report an issue using Svelte Storyblok SDK
 labels: [pending-triage, pending-author]
 body:
   - type: markdown
     attributes:
       value: |
-        You're now going to fill out a bug report at the React Storyblok SDK. Thanks a lot for taking the time and let's make Storyblok open source projects better together!
+        You're now going to fill out a bug report at the Svelte Storyblok SDK. Thanks a lot for taking the time and let's make Storyblok open source projects better together!
   - type: textarea
     id: bug-description
     attributes:
       label: Describe the issue you're facing
       description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, tell us in the description so we can review it. Thanks in advance!
-      placeholder: My React Storyblok SDK configuration is ... # # Expected behavior ... ## Current Behavior ...
+      placeholder: My Svelte Storyblok SDK configuration is ... # # Expected behavior ... ## Current Behavior ...
     validations:
       required: true
   - type: input
@@ -32,9 +32,9 @@ body:
     id: system-info
     attributes:
       label: System Info
-      description: Output of `npx envinfo --system --npmPackages '{ react, @storyblok/*}' --binaries --browsers`
+      description: Output of `npx envinfo --system --npmPackages '{ svelte, @storyblok/*}' --binaries --browsers`
       render: shell
-      placeholder: System, Binaries, Browsers, React & Storyblok SDK version
+      placeholder: System, Binaries, Browsers, Svelte & Storyblok SDK version
     validations:
       required: true
   - type: dropdown
@@ -60,7 +60,7 @@ body:
       label: Validations
       description: Before submitting the issue, please make sure you do the following
       options:
-        - label: Follow our [Code of Conduct](https://www.storyblok.com/trust-center?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-js-client#code-of-conduct)
+        - label: Follow our [Code of Conduct](https://www.storyblok.com/trust-center#code-of-conduct?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-js-client)
           required: true
   - type: markdown
     attributes:
