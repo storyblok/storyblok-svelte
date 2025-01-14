@@ -64,11 +64,11 @@ Please note that you have to use `npm` - unfortunately, we are currently not sup
 Initialize the library in your application by adding the `apiPlugin` and the [access token](https://www.storyblok.com/docs/api/content-delivery/v2?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte) of your Storyblok space:
 
 ```js
-import App from "./App.svelte";
-import { storyblokInit, apiPlugin } from "@storyblok/svelte";
+import App from './App.svelte';
+import { apiPlugin, storyblokInit } from '@storyblok/svelte';
 
 storyblokInit({
-  accessToken: "<your-token>",
+  accessToken: '<your-token>',
   // bridge: false,
   use: [apiPlugin],
 
@@ -114,12 +114,12 @@ Use the `getStoryblokApi`()` to get your stories from the Storyblok CDN API:
 
 ```html
 <script>
-  import { onMount } from "svelte";
-  import { getStoryblokApi } from "@storyblok/svelte";
+  import { onMount } from 'svelte';
+  import { getStoryblokApi } from '@storyblok/svelte';
   onMount(async () => {
     const storyblokApi = getStoryblokApi();
-    const { data } = await storyblokApi.get("cdn/stories/home", {
-      version: "draft",
+    const { data } = await storyblokApi.get('cdn/stories/home', {
+      version: 'draft',
     });
   });
 </script>
@@ -134,13 +134,13 @@ Use `useStoryBridge` to get the updated story every time a change event is trigg
 
 ```html
 <script>
-  import { onMount } from "svelte";
-  import { getStoryblokApi, useStoryblokBridge } from "@storyblok/svelte";
+  import { onMount } from 'svelte';
+  import { getStoryblokApi, useStoryblokBridge } from '@storyblok/svelte';
   let story = null;
   onMount(async () => {
     const storyblokApi = getStoryblokApi();
-    const { data } = await storyblokApi.get("cdn/stories/home", {
-      version: "draft",
+    const { data } = await storyblokApi.get('cdn/stories/home', {
+      version: 'draft',
     });
     story = data.story;
     useStoryblokBridge(story.id, (newStory) => (story = newStory));
@@ -151,9 +151,9 @@ Use `useStoryBridge` to get the updated story every time a change event is trigg
 You can pass [Bridge options](https://www.storyblok.com/docs/Guides/storyblok-latest-js?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte) as a third parameter as well:
 
 ```js
-useStoryblokBridge(story.id, (newStory) => (story = newStory), {
-  resolveRelations: ["Article.author"],
-  resolveLinks: "url",
+useStoryblokBridge(story.id, newStory => (story = newStory), {
+  resolveRelations: ['Article.author'],
+  resolveLinks: 'url',
 });
 ```
 
@@ -187,10 +187,10 @@ You can use an `apiOptions` object. This is passed down to the [storyblok-js-cli
 
 ```js
 storyblokInit({
-  accessToken: "<your-token>",
+  accessToken: '<your-token>',
   apiOptions: {
-    //storyblok-js-client config object
-    cache: { type: "memory" },
+    // storyblok-js-client config object
+    cache: { type: 'memory' },
   },
   use: [apiPlugin],
 });
@@ -204,7 +204,7 @@ You can conditionally load it by using the `bridge` option. Very useful if you w
 
 ```js
 storyblokInit({
-  bridge: process.env.NODE_ENV !== "production",
+  bridge: process.env.NODE_ENV !== 'production',
 });
 ```
 
@@ -212,7 +212,7 @@ Keep in mind you have still access to the raw `window.StoryblokBridge`:
 
 ```js
 const sbBridge = new window.StoryblokBridge(options);
-sbBridge.on(["input", "published", "change"], (event) => {
+sbBridge.on(['input', 'published', 'change'], (event) => {
   // ...
 });
 ```
@@ -225,7 +225,7 @@ You can easily render rich text by using the `renderRichText` function that come
 
 ```html
 <script>
-  import { renderRichText } from "@storyblok/svelte";
+  import { renderRichText } from '@storyblok/svelte';
   export let blok;
   $: articleHTML = renderRichText(blok.article);
 </script>
@@ -243,21 +243,21 @@ npm i clone-deep
 You can set a **custom Schema and component resolver globally** at init time by using the `richText` init option:
 
 ```js
-import { RichTextSchema, storyblokInit } from "@storyblok/svelte";
-import cloneDeep from "clone-deep";
+import { RichTextSchema, storyblokInit } from '@storyblok/svelte';
+import cloneDeep from 'clone-deep';
 const mySchema = cloneDeep(RichTextSchema); // you can make a copy of the default RichTextSchema
 // ... and edit the nodes and marks, or add your own.
 // Check the base RichTextSchema source here https://github.com/storyblok/storyblok-js-client/blob/master/source/schema.js
 storyblokInit({
-  accessToken: "<your-token>",
+  accessToken: '<your-token>',
   richText: {
     schema: mySchema,
     resolver: (component, blok) => {
       switch (component) {
-        case "my-custom-component":
+        case 'my-custom-component':
           return `<div class="my-component-class">${blok.text}</div>`;
         default:
-          return "Resolver not defined";
+          return 'Resolver not defined';
       }
     },
   },
@@ -326,10 +326,10 @@ This plugin is for Svelte. Thus, it supports the [same browsers as Svelte 3](htt
 When working with a component library, create an alias pointing '@storyblok/svelte' to './node_modules/@storyblok/svelte'. This will ensure the imported module will use the local version of Storyblok SDK. In your `vite.config.js`, include:
 
 ```js
-import { sveltekit } from "@sveltejs/kit/vite";
-import basicSsl from "@vitejs/plugin-basic-ssl";
-import path from "path";
-import { fileURLToPath } from "url";
+import { sveltekit } from '@sveltejs/kit/vite';
+import basicSsl from '@vitejs/plugin-basic-ssl';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 
@@ -343,9 +343,9 @@ const config = {
   },
   resolve: {
     alias: {
-      "@storyblok/svelte": path.resolve(
+      '@storyblok/svelte': path.resolve(
         __dirname,
-        "./node_modules/@storyblok/svelte"
+        './node_modules/@storyblok/svelte'
       ),
     },
   },

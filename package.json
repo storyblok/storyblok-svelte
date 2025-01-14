@@ -1,93 +1,101 @@
 {
-  "name": "@storyblok/svelte-ws",
-  "private": true,
-  "version": "0.0.1",
-  "workspaces": [
-    "./lib",
-    "./playground",
-    "./playground-sveltekit"
+  "name": "@storyblok/svelte",
+  "type": "module",
+  "version": "5.0.0",
+  "private": false,
+  "packageManager": "pnpm@9.15.3",
+  "description": "SDK to integrate Storyblok into your project using Svelte.",
+  "author": "Storyblok",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storyblok/storyblok-svelte.git"
+  },
+  "bugs": {
+    "url": "https://github.com/storyblok/storyblok-svelte/issues"
+  },
+  "sideEffects": [
+    "**/*.css"
   ],
-  "types": "./dist/types.index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "!dist/**/*.spec.*",
+    "!dist/**/*.test.*",
+    "dist"
+  ],
+  "svelte": "./dist/index.js",
   "scripts": {
-    "dev": "npm run dev --workspace=lib & npm run demo",
-    "dev-kit": "npm run dev --workspace=lib & npm run demo-sveltekit",
-    "demo": "npm run demo --workspace=playground",
-    "demo-sveltekit": "npm run dev --workspace=playground-sveltekit",
-    "build": "npm run build --workspace=lib",
-    "build:ts": "vite build && tsc --prokect tsconfigjson",
-    "test:unit": "npm run test:unit --workspace=lib",
-    "test:e2e": "npm run test:e2e --workspace=lib",
-    "prepare": "husky install",
-    "check": "svelte-check --tsconfig lib/tsconfig.json"
+    "dev": "vite dev",
+    "build": "vite build && pnpm package",
+    "preview": "vite preview",
+    "package": "svelte-kit sync && svelte-package && publint",
+    "test": "pnpm run test:unit:ci",
+    "test:unit": "vitest",
+    "test:unit:ci": "vitest run",
+    "test:unit:ui": "vitest --ui",
+    "playground": "pnpm run --filter ./playground/sveltekit dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepublishOnly": "pnpm package",
+    "prepare": "simple-git-hooks"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "dependencies": {
+    "@storyblok/js": "3.2.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.4.0",
-    "@commitlint/config-conventional": "^19.4.1",
-    "@rollup/plugin-typescript": "^11.1.6",
-    "@tsconfig/svelte": "^5.0.4",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-svelte3": "^4.0.0",
-    "husky": "^9.1.5",
-    "lint-staged": "^15.2.9",
-    "prettier": "^3.3.3",
-    "prettier-plugin-svelte": "^3.2.6",
-    "svelte-check": "^3.8.6",
-    "svelte-preprocess": "^5.1.4",
-    "tslib": "^2.7.0",
-    "typescript": "^5.5.4",
-    "@typescript-eslint/eslint-plugin": "^7.17.0",
-    "@typescript-eslint/parser": "^7.18.0"
-  },
-  "lint-staged": {
-    "*.{svelte,js,css,ts}": [
-      "prettier --write",
-      "eslint"
-    ],
-    "*.md": [
-      "prettier --write"
-    ]
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@eslint/compat": "^1.2.5",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@storyblok/eslint-config": "^0.3.0",
+    "@sveltejs/adapter-auto": "^3.3.1",
+    "@sveltejs/kit": "^2.15.2",
+    "@sveltejs/package": "^2.3.7",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@tsconfig/recommended": "^1.0.8",
+    "eslint": "^9.18.0",
+    "eslint-plugin-svelte": "^2.36.0",
+    "publint": "^0.2.0",
+    "simple-git-hooks": "^2.11.1",
+    "start-server-and-test": "^2.0.9",
+    "svelte": "^5.17.3",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.19.1",
+    "vite": "^6.0.7",
+    "vite-plugin-dts": "^4.5.0",
+    "vitest": "^2.1.8"
   },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "prettier"
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": 2020,
-      "sourceType": "module"
-    },
-    "env": {
-      "es6": true,
-      "browser": true
-    },
-    "ignorePatterns": "dist/",
-    "plugins": [
-      "svelte3",
-      "@typescript-eslint"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "*.svelte"
-        ],
-        "processor": "svelte3/svelte3"
-      }
-    ],
-    "settings": {
-      "svelte3/typescript": true
+    "rules": {
+      "body-max-line-length": [2, "always", 200]
     }
   },
-  "prettier": {
-    "trailingComma": "es5",
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": false
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint",
+    "pre-push": "pnpm commitlint --last --verbose"
   }
 }
