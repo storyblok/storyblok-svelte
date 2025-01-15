@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { getStoryblokApi } from '../lib/storyblokStore';
+import { getStoryblokApi } from '../lib/storyblok-store';
 
 // We simulate an uninitialized API by returning null
 vi.mock('@storyblok/js', () => ({
@@ -8,7 +8,7 @@ vi.mock('@storyblok/js', () => ({
   })),
 }));
 
-describe('storyblokStore initialization', () => {
+describe('storyblok-store initialization', () => {
   const consoleError = vi.spyOn(console, 'error').mockImplementation(() => {});
 
   it('should log error if API is not initialized', () => {

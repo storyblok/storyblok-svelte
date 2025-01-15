@@ -3,7 +3,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
-  plugins: [dts({ insertTypesEntry: true }), sveltekit()] as Plugin[],
+  plugins: [dts({ insertTypesEntry: true, exclude: '**/*.spec.ts' }), sveltekit()] as Plugin[],
 
   test: {
     environment: 'jsdom',
