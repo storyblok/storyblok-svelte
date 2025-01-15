@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { getComponent, getStoryblokApi, storyblokInit } from '../lib/storyblokStore';
+import { getComponent, getStoryblokApi, storyblokInit } from '../lib/storyblok-store';
 import type { SbSvelteSDKOptions } from '../lib/types';
 
 // Mock @storyblok/js
@@ -9,7 +9,7 @@ vi.mock('@storyblok/js', () => ({
   })),
 }));
 
-describe('storyblokStore', () => {
+describe('storyblok-store', () => {
   // Mock console.error to prevent noise in tests
   const consoleError = vi.spyOn(console, 'error').mockImplementation(() => {});
 

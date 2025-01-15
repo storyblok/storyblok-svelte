@@ -55,9 +55,9 @@ export {
   getComponent,
   getStoryblokApi,
   storyblokInit,
-} from './storyblokStore';
+} from './storyblok-store';
 
 /**
  * @deprecated Use getStoryblokApi() instead. This will be removed in a next major version.
  */
-export { getStoryblokApi as useStoryblokApi } from './storyblokStore';
+export { getStoryblokApi as useStoryblokApi } from './storyblok-store';
