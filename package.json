@@ -76,6 +76,7 @@
     "eslint": "^9.18.0",
     "eslint-plugin-svelte": "^2.46.1",
     "jsdom": "^26.0.0",
+    "pathe": "^2.0.2",
     "publint": "^0.3.2",
     "simple-git-hooks": "^2.11.1",
     "start-server-and-test": "^2.0.10",
