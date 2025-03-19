@@ -18,26 +18,28 @@
     "test:unit": "npm run test:unit --workspace=lib",
     "test:e2e": "npm run test:e2e --workspace=lib",
     "prepare": "husky install",
-    "check": "svelte-check --tsconfig lib/tsconfig.json"
+    "check": "svelte-check --tsconfig lib/tsconfig.json",
+    "check-licenses": "node scripts/license-checker.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.4.1",
     "@rollup/plugin-typescript": "^11.1.6",
     "@tsconfig/svelte": "^5.0.4",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "husky": "^9.1.5",
+    "license-checker": "^25.0.1",
     "lint-staged": "^15.2.9",
     "prettier": "^3.3.3",
     "prettier-plugin-svelte": "^3.2.6",
     "svelte-check": "^3.8.6",
     "svelte-preprocess": "^5.1.4",
     "tslib": "^2.7.0",
-    "typescript": "^5.5.4",
-    "@typescript-eslint/eslint-plugin": "^7.17.0",
-    "@typescript-eslint/parser": "^7.18.0"
+    "typescript": "^5.5.4"
   },
   "lint-staged": {
     "*.{svelte,js,css,ts}": [
