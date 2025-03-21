@@ -14,12 +14,13 @@
 	  "@storyblok/svelte": "workspace:^"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.3.1",
-		"@sveltejs/kit": "^2.15.2",
+		"@sveltejs/adapter-auto": "^5.0.0",
+		"@sveltejs/kit": "^2.20.2",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
-		"svelte": "^5.17.4",
-		"svelte-check": "^4.1.4",
-		"typescript": "^5.7.3",
-		"vite": "^6.0.7"
+		"@vitejs/plugin-basic-ssl": "^2.0.0",
+		"svelte": "^5.24.1",
+		"svelte-check": "^4.1.5",
+		"typescript": "^5.8.2",
+		"vite": "^6.2.2"
 	}
 }
