@@ -9,8 +9,6 @@ export interface SbSvelteSDKOptions extends SbSDKOptions {
   components?: SbSvelteComponentsMap | CallableFunction;
 }
 
-export { apiPlugin } from '@storyblok/js';
-
 export type {
   ISbAlternateObject,
   ISbCache,
