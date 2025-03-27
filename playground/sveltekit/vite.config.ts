@@ -4,10 +4,7 @@ import basicSsl from '@vitejs/plugin-basic-ssl';
 import { resolve } from 'pathe';
 
 export default defineConfig({
-	plugins: [sveltekit(), basicSsl({
-		name: 'my-ssl',
-		domains: ['localhost']
-	})] as PluginOption[],
+  plugins: [sveltekit(), basicSsl()] as PluginOption[],
 	resolve: {
 		alias: {
 		  '@storyblok/svelte': resolve(__dirname, '../../src/lib/index.ts'),

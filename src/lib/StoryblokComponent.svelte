@@ -1,7 +1,7 @@
 <script>
   import { getComponent } from './index';
 
-  const { blok, ...rest } = $props();
+  const { blok = null, ...rest } = $props();
 
   if (!blok) {
     console.error('Please provide a \'blok\' property to the StoryblokComponent');
@@ -11,6 +11,6 @@
   const SvelteComponent = $derived(component);
 </script>
 
-{#if component}
+{#if SvelteComponent}
   <SvelteComponent {blok} {...rest} />
 {/if}
