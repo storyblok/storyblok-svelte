@@ -1,11 +1,32 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: npm
+    directory: /
     schedule:
-      interval: "daily"
-      time: "04:00"
+      interval: daily
+      time: '04:00'
     commit-message:
       prefix: fix
       prefix-development: chore
       include: scope
+    labels:
+      - dependabot
+    groups:
+      security-updates:
+        patterns:
+          - '*'
+        exclude-patterns:
+          - 'storyblok*'
+        update-types:
+          - patch
+          - minor
+      storyblok:
+        patterns:
+          - 'storyblok*'
+        update-types:
+          - patch
+          - minor
+    ignore:
+      - dependency-name: '*'
+        update-types:
+          - version-update:semver-major

@@ -1,0 +1,26 @@
+{
+	"name": "my-app",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"dependencies": {
+	  "@storyblok/svelte": "workspace:^"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^5.0.0",
+		"@sveltejs/kit": "^2.20.2",
+		"@sveltejs/vite-plugin-svelte": "^5.0.3",
+		"@vitejs/plugin-basic-ssl": "^2.0.0",
+		"svelte": "^5.25.3",
+		"svelte-check": "^4.1.5",
+		"typescript": "^5.8.2",
+		"vite": "^6.2.3"
+	}
+}
