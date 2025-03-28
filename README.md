@@ -29,6 +29,13 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/@storyblok/svelte">
+    <img src="https://img.shields.io/npm/v/@storyblok/svelte/latest.svg?style=flat-square" alt="npm package" />
+  </a>
+  <img src="https://img.shields.io/badge/Svelte-5.x%20Ready-FF3E00?style=flat-square&logo=svelte" alt="Svelte 5 Ready" />
+</p>
+
 ## Kickstart a new project
 Are you eager to dive into coding? **[Follow these steps to kickstart a new project with Storyblok and Svelte](https://www.storyblok.com/technologies?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte#sveltekit)**, and get started in just a few minutes!
 
@@ -39,9 +46,15 @@ Are you looking for a hands-on, step-by-step tutorial? The **[SvelteKit Ultimate
 
 | Version to install                                                                                                                      | Support                                              |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| Latest (from v3) `@storyblok/svelte`                                                                                                    | Modern browsers + Node 18+                           |
+| Latest (from v3) `@storyblok/svelte`                                                                                                    | Modern browsers + Node 18+ (Compatible with Svelte 5)|
 | Latest (from v3) `@storyblok/svelte` <br> + Fetch polyfill like [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) | Browsers and Node versions with no Fetch API support |
 | [Version 2](https://github.com/storyblok/@storyblok/svelte/tree/v2.5.0) `@storyblok/svelte@2`                                           | Internet Explorer support                            |
+
+### Upgrading to Svelte 5
+
+We recommend upgrading to Svelte 5 for the latest features and improvements. The latest version of `@storyblok/svelte` is fully compatible with Svelte 5.
+
+If you're migrating from Svelte 3/4 to Svelte 5, please follow the [official Svelte migration guide](https://svelte.dev/docs/svelte/v5-migration-guide) and then ensure you're using the latest version of `@storyblok/svelte`.
 
 ## Usage
 
@@ -58,8 +71,6 @@ Install `@storyblok/svelte`
 ```bash
 npm install @storyblok/svelte
 ```
-
-Please note that you have to use `npm` - unfortunately, we are currently not supporting `yarn` or `pnpm` for this SDK.
 
 Initialize the library in your application by adding the `apiPlugin` and the [access token](https://www.storyblok.com/docs/api/content-delivery/v2?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte) of your Storyblok space:
 
@@ -78,7 +89,9 @@ storyblokInit({
 });
 ```
 
-The best place to initialize the Storyblok library is in the `main.ts.` or `main.js` file if you are using `svelte` or in the `load()` function in the `src/routes/+layout.js` file if you are using `SvelteKit`.
+The best place to initialize the Storyblok library is in the `main.(ts|js).` or `main.(ts|js)` file if you are using `svelte` or in the `load()` function in the `src/routes/+layout.(ts|js)` file if you are using `SvelteKit`.
+
+You can find a good example with SvelteKit in the `playground` folder.
 
 List all your components to the components object in the storyblokInit function. You can load all of them by adding them to the list.
 
@@ -172,7 +185,7 @@ To link the Storyblok components, you have to
 - Use the `StoryblokComponent` to load them by passing the `blok` property
 
 ```html
-<StoryblokComponent {blok} />
+<StoryblokComponent blok={blok} />
 ```
 
 > The `blok` is the actual blok data coming from [Storyblok's Content Delivery API](https://www.storyblok.com/docs/api/content-delivery/v2?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte).
@@ -226,8 +239,10 @@ You can easily render rich text by using the `renderRichText` function that come
 ```html
 <script>
   import { renderRichText } from '@storyblok/svelte';
+
+  let articleHTML = $derived(renderRichText(blok.article));
+
   export let blok;
-  $: articleHTML = renderRichText(blok.article);
 </script>
 
 <div class="prose">{@html articleHTML}</div>
@@ -317,7 +332,7 @@ and then, activating the plugin in `plugins` configuration array:
 
 ### Compatibility
 
-This plugin is for Svelte. Thus, it supports the [same browsers as Svelte 3](https://github.com/sveltejs/svelte/issues/558). In short: all modern browsers and IE10+.
+This plugin was made and tested with Svelte 5.
 
 ## Troubleshooting
 
