@@ -1,10 +1,15 @@
 name: Run linters
-on: [push]
-
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+  push:
+    branches:
+      - '**'
 env:
   PNPM_CACHE_FOLDER: .pnpm-store
   SKIP_INSTALL_SIMPLE_GIT_HOOKS: 1 # Skip installing simple-git-hooks
-
 jobs:
   lint:
     name: Lint
