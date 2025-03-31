@@ -99,7 +99,7 @@
         200
       ],
       "footer-max-line-length": [
-        2,
+        0,
         "always",
         "Infinity"
       ]
