@@ -1,3 +1,14 @@
+> [!IMPORTANT]
+> **📦 Package Migration Notice**
+> 
+> This package has been migrated to the [Storyblok monorepo](https://github.com/storyblok/monoblok). 
+> 
+> **⚠️ This repository has been archived and is no longer maintained. Development has moved to the monorepo.**
+> 
+> **New Location**: You can now find this package at [packages/svelte](https://github.com/storyblok/monoblok/tree/main/packages/svelte)
+> 
+> Please visit the monorepo for the latest updates, issues, and contributions.
+
 <div align="center">
 	<a href="https://www.storyblok.com?utm_source=github.com&utm_medium=readme&utm_campaign=storyblok-svelte"  align="center">
 		<img src="https://a.storyblok.com/f/88751/1776x360/783760dfac/storybloksvelte.png"  alt="Storyblok Logo">
@@ -34,11 +45,11 @@ Are you looking for a hands-on, step-by-step tutorial? The **[SvelteKit Ultimate
 
 ## Compatibility
 
-| Version to install                                                                                                                      | Support                                              |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| Latest (from v3) `@storyblok/svelte`                                                                                                    | Modern browsers + Node 18+ (Compatible with Svelte 5)|
-| Latest (from v3) `@storyblok/svelte` <br> + Fetch polyfill like [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) | Browsers and Node versions with no Fetch API support |
-| [Version 2](https://github.com/storyblok/@storyblok/svelte/tree/v2.5.0) `@storyblok/svelte@2`                                           | Internet Explorer support                            |
+| Version to install                                                                                                                      | Support                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| Latest (from v3) `@storyblok/svelte`                                                                                                    | Modern browsers + Node 18+ (Compatible with Svelte 5) |
+| Latest (from v3) `@storyblok/svelte` <br> + Fetch polyfill like [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) | Browsers and Node versions with no Fetch API support  |
+| [Version 2](https://github.com/storyblok/@storyblok/svelte/tree/v2.5.0) `@storyblok/svelte@2`                                           | Internet Explorer support                             |
 
 ### Upgrading to Svelte 5
 
