@@ -60,7 +60,7 @@
     "svelte": "^5.0.0"
   },
   "dependencies": {
-    "@storyblok/js": "4.0.0"
+    "@storyblok/js": "4.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
